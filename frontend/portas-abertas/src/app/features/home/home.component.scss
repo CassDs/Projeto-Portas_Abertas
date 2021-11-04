@@ -1,0 +1,220 @@
+header {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+a {
+  color: #06446b;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.7;
+}
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, Helvetica, sans-serif;
+  background: #fff;
+  height: 8vh;
+  text-shadow: 0 0 3px white;
+  font-size: 18px;
+  font-family: "Voltaire", sans-serif;
+}
+.home {
+  background: #06446b;
+  background-size: cover;
+  height: 92vh;
+}
+.nav-logo,
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+.nav-logo {
+  margin-left: -150px;
+}
+.nav-list {
+  margin-right: -150px;
+}
+.nav-logo a {
+  letter-spacing: 3px;
+  margin-top: 23px;
+}
+.nav-list li {
+  letter-spacing: 3px;
+  margin: 10px;
+}
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+.logoP {
+  animation: fade 3s ease-in-out forwards;
+  opacity: 0;
+}
+.txt-porta h1,
+.txt-porta h4,
+.txt-porta p,
+.txt-porta a {
+  animation: fade 6s ease-in-out forwards;
+  opacity: 0;
+}
+.nav-list li a.active {
+  text-decoration: none;
+  color: white;
+  padding: 2px 5px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-shadow: 0 0 3px #00bfff;
+}
+.nav-list li a.active {
+  background: #06446b;
+  border-radius: 5px;
+}
+.nav-list li a.active:hover {
+  color: #00ced1;
+}
+.img-porta {
+  position: relative;
+  margin-left: 100px;
+}
+@media (max-width: 1088px) {
+  .img-porta {
+    margin-left: 10px;
+  }
+}
+.txt-porta {
+  margin-top: -540px;
+  margin-left: 750px;
+  color: #fff;
+}
+@media (max-width: 1088px) {
+  .txt-porta {
+    margin-left: 600px;
+  }
+}
+.txt-porta h1 {
+  position: relative;
+  font-size: 80px;
+  margin-left: -80px;
+}
+.txt-porta h1,
+.txt-porta h4 {
+  font-family: "Voltaire", sans-serif;
+}
+.txt-porta h4 {
+  position: relative;
+  font-size: 30px;
+  margin-left: -26px;
+}
+.txt-porta p {
+  position: relative;
+  font-size: 18px;
+  margin-left: 34px;
+  margin-top: 12px;
+}
+.txt-porta a.active {
+  text-decoration: none;
+  padding: 2px 5px;
+  position: relative;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 28px;
+  font-family: "Voltaire", sans-serif;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-left: 70px;
+  top: 50px;
+  text-shadow: 0 0 3px #00bfff;
+}
+.txt-porta a.active:hover {
+  color: #000080;
+}
+.txt-porta img {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  left: 0px;
+  width: 100%;
+  height: 110px;
+}
+.sobre-txt {
+  text-align: center;
+  margin-top: 140px;
+  font-family: "Voltaire", sans-serif;
+  font-size: 30px;
+  color: #06446b;
+}
+.borda-sobre {
+  width: 160px;
+  height: 2px;
+  background: #06446b;
+  margin: 40px auto;
+}
+.txt-sobre {
+  text-align: center;
+  font-family: "Voltaire", sans-serif;
+  color: #06446b;
+}
+.grups {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.grup-hiago,
+.grup-gina,
+.grup-ron {
+  display: flex;
+  flex-direction: column;
+  background: #06446b;
+  width: 290px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.grup-hermione {
+  display: flex;
+  flex-direction: column;
+  background: #06446b;
+  width: 290px;
+  border-radius: 10px;
+}
+
+.hiago,
+.gina,
+.ron,
+.hermione {
+  text-align: center;
+  justify-content: center;
+}
+.hiago h1,
+.gina h1,
+.ron h1,
+.hermione h1 {
+  font-family: "Voltaire", sans-serif;
+  color: white;
+}
+.hiago img,
+.gina img,
+.ron img,
+.hermione img {
+  border-radius: 90px;
+}
+.hiago p,
+.gina p,
+.ron p,
+.hermione p {
+  font-family: "Voltaire", sans-serif;
+  color: white;
+}
