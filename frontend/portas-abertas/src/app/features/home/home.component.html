@@ -12,7 +12,7 @@
     <ul class="nav-list">
       <li><a href="/">Início</a></li>
       <li><a href="#sobre">Sobre</a></li>
-      <li><a href="/">Contato</a></li>
+      <li><a href="#contato">Contato</a></li>
       <li><a href="/">Parceiros</a></li>
       <li><a class="active" href="/">Cadastre-se</a></li>
     </ul>
@@ -196,6 +196,22 @@
     </div>
   </section>
   <section id="contato" class="contato">
-
+    <div class="contato-txt">
+      <h1 class="titulo-contato">Contato</h1>
+    </div>
+    <div class="borda-contato"></div>
+    <div class="form-contato">
+      <form action="/" method="POST">
+        <br>
+        <label for="name">Nome</label>
+        <input type="text" name="name" id="name" required />
+        <label for="name">E-mail</label>
+        <input type="email" name="email" id="email" required />
+        <label for="name">Menssagem</label>
+        <textarea name="message" id="message" placeholder="Escreva sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+        <br>
+    </form>
+    </div>
   </section>
 </main>
