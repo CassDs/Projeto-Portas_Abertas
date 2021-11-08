@@ -194,7 +194,6 @@ nav {
   width: 290px;
   border-radius: 10px;
 }
-
 .hiago,
 .gina,
 .ron,
@@ -213,7 +212,14 @@ nav {
 .gina img,
 .ron img,
 .hermione img {
-  border-radius: 90px;
+  border-radius: 6px;
+}
+.hiago h3,
+.gina h3,
+.ron h3,
+.hermione h3{
+  font-family: "Voltaire", sans-serif;
+  color: white;
 }
 .hiago p,
 .gina p,
@@ -222,3 +228,15 @@ nav {
   font-family: "Voltaire", sans-serif;
   color: white;
 }
+.wave {
+  content: "";
+  position: relative;
+  bottom: -110px;
+  left: 0px;
+  height: 110px;
+}
+.contato {
+  background: #06446b;
+  height: 500px;
+}
+
