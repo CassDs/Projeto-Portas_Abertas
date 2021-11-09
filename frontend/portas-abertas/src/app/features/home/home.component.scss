@@ -244,7 +244,7 @@ nav {
   text-align: center;
   font-family: "Voltaire", sans-serif;
   font-size: 30px;
-  top: 90px;
+  top: 70px;
   color: white;
 }
 .borda-contato {
@@ -253,17 +253,17 @@ nav {
   height: 2px;
   background: white;
   margin: 40px auto;
-  top: 80px;
+  top: 60px;
 }
 .form-contato{
   background: #000080;
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 290px;
+  width: 300px;
   border-radius: 10px;
-  bottom: -120px;
-  margin-left: 180px;
+  bottom: -80px;
+  margin-left: 280px;
   align-items: center;
   text-align: center;
 }
@@ -339,4 +339,40 @@ background: #09d;
   margin: 15px auto;
   line-height: 1.4;
   letter-spacing: 2px;
+}
+.cont-txt{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border-radius: 10px;
+  bottom: 320px;
+  margin-left: 680px;
+  align-items: center;
+  text-align: center;
+}
+.contato h1,
+.contato h2,
+.contato h3{
+  font-family: "Voltaire", sans-serif;
+  color: #fff;
+}
+.contato h1{
+  font-size: 42px;
+}
+.contato h2{
+  font-size: 36px;
+}
+.contato h3{
+  font-size: 24px;
+}
+.row a{
+  position: relative;
+  bottom: -20px;
+  color: #fff;
+  font-size: 40px;
+
+}
+.what{
+  margin-right: 20px;
 }
