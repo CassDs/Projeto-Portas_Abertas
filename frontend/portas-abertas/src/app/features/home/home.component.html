@@ -10,16 +10,16 @@
       <a class="logo" href="/">PORTAS ABERTAS</a>
     </ul>
     <ul class="nav-list">
-      <li><a href="/">Início</a></li>
+      <li><a href="#home">Início</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#contato">Contato</a></li>
-      <li><a href="/">Parceiros</a></li>
-      <li><a class="active" href="/">Cadastre-se</a></li>
+      <li><a routerLink="/login" >Parceiros</a></li>
+      <li><a class="active" routerLink="/cadastro">Cadastre-se</a></li>
     </ul>
   </nav>
 </header>
 <main>
-  <section class="home">
+  <section id="home" class="home">
     <div class="img-porta">
       <img
         class="logoP"
@@ -201,8 +201,8 @@
     </div>
     <div class="borda-contato"></div>
     <div class="form-contato">
+      <br>
       <form action="/" method="POST">
-        <br>
         <label for="name">Nome</label>
         <input type="text" name="name" id="name" required />
         <label for="name">E-mail</label>
@@ -214,13 +214,16 @@
     </form>
     </div>
     <div class="cont-txt">
-      <h1>Escreva nos uma mensagem</h1>
+      <h1>Escreva-nos uma mensagem</h1>
       <h2>ou</h2>
       <h3>Entre em contato através de uma das nossas redes abaixo</h3>
       <div class="row">
         <a class="what" href="#"><i class="fa fa-whatsapp"></i></a>
         <a class="inst" href="#"><i class="fa fa-instagram"></i></a>
       </div>
+    </div>
+    <div class="arrow-btn">
+      <a href="#home"><i class="fa fa-arrow-up"></i></a>
     </div>
   </section>
 </main>
