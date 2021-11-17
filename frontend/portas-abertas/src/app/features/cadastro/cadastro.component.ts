@@ -12,4 +12,13 @@ export class CadastroComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  test(){
+    const slidePage = document.querySelector(".slidepage");
+    const firtNextBtn = document.querySelector(".nextBtn");
+  
+    firtNextBtn.addEventListener("click", function(){
+    slidePage.setAttribute("style", "margin-left:-25%;")
+  });
+  }
+
 }

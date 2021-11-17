@@ -68,3 +68,92 @@
 .nav-list li a.active:hover {
   color: #00ced1;
 }
+.pageCad{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #06446b;
+}
+.container{
+  width: 580px;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 50px 35px 10px 35px;
+  color: #06446b;
+}
+.container .p1{
+  position: relative;
+  font-family: "Voltaire", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+.container .form-outer .page .title .h1{
+  margin-top: 4cm;
+}
+.container .form-outer .page .field .inicia{
+  width: 100px;
+  margin-top: 1cm;
+  margin-right: 1cm;
+}
+.container .form-outer{
+  width: 100%;
+  overflow: hidden;
+}
+.container .page{
+  margin-left: 4cm;
+}
+.form-outer form{
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page{
+  width: 25%;
+}
+.form-outer form .page .title{
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer form .page .field{
+  height: 45px;
+  width: 330px;
+}
+.form-outer form .page .field label{
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+.form-outer form .page .field input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.form-outer form .page .field button{
+  width: 100%;
+  height: calc(100% + 5px);
+  margin-top: -20px;
+  border: none;
+  border-radius: 5px;
+  background: #000080;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.form-outer form .page .field button:hover{
+  background: #00bfff;
+}
+.form-outer form .page .field .btns button{
+
+}
