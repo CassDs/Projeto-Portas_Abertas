@@ -1,5 +1,6 @@
 package br.com.portasabertas.dto;
 
+import br.com.portasabertas.model.Perfil;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,9 +15,12 @@ public class PerfilDTO {
     Long id;
     String descricao;
 
-  /*  public static List<PerfilDTO> converterToList(List<PerfilDTO> perfilDTOList) {
-        return  perfilDTOList.stream()
-                .map(PerfilDTO::new)
-                .collect(Collectors.toList());
-    }*/
+   public static List<PerfilDTO> convertToPerfilDTOList(List<Perfil> perfilList) {
+       return perfilList.stream().map(perfil -> {
+           return PerfilDTO.builder()
+                   .id(perfil.getId())
+                   .descricao(perfil.getDescricao())
+                   .build();
+       }).collect(Collectors.toList());
+   }
 }

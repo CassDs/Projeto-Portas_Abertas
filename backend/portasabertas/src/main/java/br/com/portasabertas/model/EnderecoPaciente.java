@@ -16,6 +16,10 @@ public class EnderecoPaciente {
     String logradouro;
     String bairro;
     String numero;
+    String cidade;
+    String estado;
+    String pais;
+    String telefone;
     @OneToOne
     Paciente paciente;
 }

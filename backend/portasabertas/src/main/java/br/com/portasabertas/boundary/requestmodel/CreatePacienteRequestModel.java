@@ -1,8 +1,13 @@
 package br.com.portasabertas.boundary.requestmodel;
 
+import lombok.Builder;
+import lombok.Data;
+
 import java.time.LocalDate;
 
-public class CriarPacienteRequestModel {
+@Builder
+@Data
+public class CreatePacienteRequestModel {
     String conhecimento;
     LocalDate dataNascimento;
     String escolaridade;
