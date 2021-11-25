@@ -25,151 +25,79 @@
       <header class="p1">Portas Abertas</header>  
       <div class="form-outer">
         <form action="#">
-          <div class="page slidepage">
+          <div class="page pageOne">
+            <div class="imgTitle">
+              <img src="../../../assets/img/logoPortas.png" width="400" height="400">
+            </div>
             <div class="title">
               <h1 class="h1">Vamos Começar!</h1>
             </div>
             <div class="field nextBtn">
-              <button (click)="test()" class="inicia">Iníciar</button>
+              <button type="button" (click)="test()" class="inicia">Iníciar</button>
             </div>
           </div>
 
-          <div class="page">
-            <div class="title">
-              <h4>Está procurando atendimento para você mesmo?</h4>
+          <div class="page pageTwo">
+            <div class="title q2">
+              <p>Está procurando atendimento para<br>
+                 você mesmo?</p>
             </div>
-            <div class="field btns">
-              <button>Sim, para mim</button>
-              <button>Não, outra pessoa</button>
+            <div class="field btns qB2">
+              <button class="yes" type="button">Sim, para mim</button>
+              <button class="no" type="button">Não, outra pessoa</button>
             </div>
           </div>
 
-          <div class="page">
-            <div class="title">Infomações Básicas:</div>
-            <div class="field">
-              <div class="label">Nome Completo</div>
+          <div class="page pageThree">
+            <div class="q3 info1">
+              <label>Nome:</label>
               <input type="text">
             </div>
-            <div class="field">
-              <div class="label">Data de Nascimeno</div>
+            <div class="q3 info2">
+              <label>Data de Nascimento:</label>
               <input type="date">
+            </div>  
+            <div class="q3 info3">
+              <label>Gênero:</label>
+              <input type="text">
             </div>
-            <div class="field">Gênero</div>
-            <input type="text">
-            <div class="field btns">
-              <button>Voltar</button>
-              <button>Próximo</button>
+            <div class="q3 info4">
+              <button class="backInfo" type="button">Voltar</button>
+              <button class="nextInfo" type="button">Próximo</button>
+            </div>
+          </div>
+
+          <div class="page pageFour">
+            <div class="q4 end">
+              <label for="cep">Cep:</label>
+              <input type="text" name="cep" id="cep">
+            </div>
+            <div class="q4 end2">
+              <label for="endereço">Endereço:</label>
+              <input type="text" name="endereço" id="endereço">
+            </div>
+            <div class="q4 end3">
+              <label for="numero">Número:</label>
+              <input type="text" name="numero" id="numero">
+            </div>
+            <div class="q4 end4">
+              <label for="bairro">Bairro:</label>
+              <input type="text" name="bairro" id="bairro">
+            </div>
+            <div class="q4 end5">
+              <label for="cidade">Cidade:</label>
+              <input type="text" name="cidade" id="cidade">
+            </div>
+            <div class="q4 end6">
+              <label for="estado">Estado:</label>
+              <input type="text" name="estado" id="estado">
+            </div>
+            <div class="q4 end7">
+              <button class="backEnd" type="button">Voltar</button>
+              <button class="nextEnd" type="button">Próximo</button>
             </div>
           </div>
           
-          <div class="page">
-            <div class="title">Informações Básicas:</div>
-            <div class="field">
-              <div for="cep">Cep</div>
-              <input type="text" name="cep" id="cep">
-            </div>
-            <div class="field">
-              <div for="endereço">Endereço</div>
-              <input type="text" name="endereço" id="endereço">
-            </div>
-            <div class="field">
-              <div for="numero">Número</div>
-              <input type="text" name="numero" id="numero">
-            </div>
-            <div class="field">
-              <div for="bairro">Bairro</div>
-              <input type="text" name="bairro" id="bairro">
-            </div>
-            <div class="field">
-              <div for="cidade">Cidade</div>
-              <input type="text" name="cidade" id="cidade">
-            </div>
-            <div class="field">
-              <div for="estado">Estado</div>
-              <input type="text" name="estado" id="estado">
-            </div>
-            <div class="field btns">
-              <button>Voltar</button>
-              <button>Próximo</button>
-            </div>
-          </div>  
-
-          <div class="page">
-            <div class="title">Infomações Básicas:</div>
-            <div class="field">
-              <div class="label">E-mail</div>
-              <input type="text">
-            </div>
-            <div class="field">
-              <div class="label">Telefone com DDD (WhatsApp):</div>
-              <input type="number">
-            </div>
-            <div class="field">
-              <div class="label">Outro telefone para contato com DDD:</div>
-              <input type="number">
-            </div>
-            <div class="field btns">
-              <button>Voltar</button>
-              <button>Próximo</button>
-            </div>
-          </div>
-
-          <div class="page">
-            <div class="title">Infomações Básicas:</div>
-            <div class="field">
-              <div class="label">Profissão</div>
-              <input type="text">
-            </div>
-            <div class="field">
-              <div class="label">Escolaridade</div>
-              <select>
-                <option>Analfabeto</option>
-                <option>Fundamental Incompleto</option>
-                <option>Fundamental Completo</option>
-                <option>Médio Incompleto</option>
-                <option>Médio Completo</option>
-                <option>Superior Incompleto</option>
-                <option>Superior Completo</option>
-                <option>Mestrado</option>
-                <option>Doutorado</option>
-              </select>
-            </div>
-            <div class="field">
-              <div class="label">Como você nos conheceu?</div>
-              <select>
-                <option>Amigo</option>
-                <option>Família</option>
-                <option>Redes Sociais</option>
-                <option>Outros</option>
-              </select>
-            </div>
-            <div class="field btns">
-              <button>Voltar</button>
-              <button>Próximo</button>
-            </div>
-          </div>          
-
-          <div class="page">
-            <div class="title">Infomações Básicas:</div>
-            <p>Tem algo que queira nos dizer nesse momento? 
-               (Esse espaço é aberto para que você possa falar
-               o que quiser e que poderá guiar nossa primeira
-               conversa ao entrar em contato com você.)</p>
-               <textarea name="message" id="message" placeholder="Escreva sua mensagem"></textarea>
-            <div class="field btns">
-              <button>Voltar</button>
-              <button>Finalizar</button>
-            </div>
-          </div>
-
-          <div class="page">
-            <div class="title"></div>
-            <h1>Suas cadastros foi finalizado!</h1>
-              <p>Em breve  entraremos em contato com você
-                para marcamos os próximo passos...
-              </p>
-          </div>
-
         </form>
       </div>
     </div>

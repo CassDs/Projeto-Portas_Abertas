@@ -1,3 +1,4 @@
+// NavBar
 *{
     margin: 0;
     padding: 0;
@@ -68,6 +69,7 @@
 .nav-list li a.active:hover {
   color: #00ced1;
 }
+// Fim NavBar
 .pageCad{
   position: relative;
   display: flex;
@@ -93,14 +95,192 @@
   font-weight: 600;
   margin: 0 0 30px 0;
 }
+// Questionario cadastro
+.container .form-outer .page .imgTitle{
+  margin-left: -4cm;
+  margin-top: -2.4cm;
+}
 .container .form-outer .page .title .h1{
-  margin-top: 4cm;
+  margin-top: -3cm;
 }
 .container .form-outer .page .field .inicia{
   width: 100px;
-  margin-top: 1cm;
-  margin-right: 1cm;
+  margin-top: 0.2cm;
+  margin-right: 1.5cm;
 }
+.pageOne{
+  height: 320px;
+  visibility: visible;
+}
+//q2
+.container .form-outer .page .q2 p{
+  width: 600px;
+  margin-left: -17cm;
+  margin-top: 2cm;
+  font-weight: bold;
+}
+.container .form-outer .page .qB2{
+  display: flex;
+  width: 600px;
+  margin-left: -17.8cm;
+  margin-top: 3cm;
+}
+.container .form-outer .page .qB2 button{
+  width: 220px;
+  margin-left: 10px;
+}
+.pageTwo{
+  visibility: hidden;
+}
+//q3
+.page .q3{
+ margin-left: -66cm;
+ font-size: 24px;
+ font-weight: bold;
+}
+.q3 input{
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.page .info1 input{
+  width: 380px;
+  
+}
+.page .info2{
+  margin-top: 0.6cm;
+  margin-left: -68.02cm;
+}
+.page .info2 input{
+  width: 160px;
+}
+.page .info3{
+  margin-top: 0.6cm;
+  margin-left: -70.91cm;
+}
+.page .info3 input{
+  width: 180px;
+}
+.page .info1 label,
+.page .info2 label,
+.page .info3 label{
+  margin-right: 10px;
+}
+.q3 button{
+  margin-right: 10px;
+  width: 100px;
+  height: 30px;
+  margin-top: -20px;
+  border: none;
+  border-radius: 3px;
+  background: #000080;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.q3 button:hover{
+  background: #00bfff;
+}
+.page .info4{
+  margin-top: 2.1cm;
+  margin-left: -55.56cm;
+}
+.pageThree{
+  margin-top: 1cm;
+  visibility: hidden;
+}
+//q4
+.q4{
+  margin-left: -102cm;
+  font-size: 24px;
+  font-weight: bold;
+}
+.q4 input{
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.page .end{
+  margin-left: -105.18cm;
+}
+.page .end input{
+  width: 110px;
+}
+.page .end2{
+  margin-top: 0.3cm;
+  margin-left: -97.1cm;
+}
+.page .end2 input{
+  width: 360px;
+}
+.page .end3{
+  margin-top: 0.3cm;
+  margin-left: -105.34cm;
+}
+.page .end3 input{
+  width: 60px;
+}
+.page .end4{
+  margin-top: -0.7cm;
+  margin-left: -92cm;
+}
+.page .end4 input{
+  width: 200px;
+}
+.page .end5{
+  margin-top: 0.3cm;
+  margin-left: -103.76cm;
+}
+.page .end5 input{
+  width: 130px;
+}
+.page .end6{
+  margin-top: -0.7cm;
+  margin-left: -90.5cm;
+}
+.page .end6 input{
+  width: 140px;
+}
+.page .end label,
+.page .end2 label,
+.page .end3 label,
+.page .end4 label,
+.page .end5 label,
+.page .end6 label{
+  margin-right: 10px;
+}
+.page .end7 button{
+  margin-right: 10px;
+  width: 100px;
+  height: 30px;
+  margin-top: -20px;
+  border: none;
+  border-radius: 3px;
+  background: #000080;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.page .end7 button:hover{
+  background: #00bfff;
+}
+.page .end7{
+  margin-top: 1.9cm;
+  margin-left: -86cm;
+}
+.pageFour{
+  margin-top: 0.8cm;
+  visibility: hidden;
+}
+//
 .container .form-outer{
   width: 100%;
   overflow: hidden;
@@ -130,8 +310,6 @@
   font-weight: 500;
 }
 .form-outer form .page .field input{
-  height: 100%;
-  width: 100%;
   border: 1px solid lightblue;
   border-radius: 5px;
   font-size: 18px;
@@ -154,6 +332,4 @@
 .form-outer form .page .field button:hover{
   background: #00bfff;
 }
-.form-outer form .page .field .btns button{
 
-}
