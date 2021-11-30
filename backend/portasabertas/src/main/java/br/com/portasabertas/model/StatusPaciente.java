@@ -1,7 +1,9 @@
 package br.com.portasabertas.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
@@ -10,6 +12,8 @@ import java.util.List;
 @Builder
 @Data
 @Table(name = "status_paciente")
+@AllArgsConstructor
+@NoArgsConstructor
 public class StatusPaciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
