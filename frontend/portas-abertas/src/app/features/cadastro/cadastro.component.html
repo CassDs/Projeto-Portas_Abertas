@@ -1,3 +1,4 @@
+
 <header>
     <nav>
       <ul class="nav-logo">
@@ -17,4 +18,88 @@
         <li><a class="active" routerLink="/cadastro">Cadastre-se</a></li>
       </ul>
     </nav>
-  </header>
+</header>
+<main>
+  <section class="pageCad"> 
+    <div class="container">
+      <header class="p1">Portas Abertas</header>  
+      <div class="form-outer">
+        <form action="#">
+          <div class="page pageOne">
+            <div class="imgTitle">
+              <img src="../../../assets/img/logoPortas.png" width="400" height="400">
+            </div>
+            <div class="title">
+              <h1 class="h1">Vamos Começar!</h1>
+            </div>
+            <div class="field nextBtn">
+              <button type="button" (click)="test()" class="inicia">Iníciar</button>
+            </div>
+          </div>
+
+          <div class="page pageTwo">
+            <div class="title q2">
+              <p>Está procurando atendimento para<br>
+                 você mesmo?</p>
+            </div>
+            <div class="field btns qB2">
+              <button class="yes" type="button">Sim, para mim</button>
+              <button class="no" type="button">Não, outra pessoa</button>
+            </div>
+          </div>
+
+          <div class="page pageThree">
+            <div class="q3 info1">
+              <label>Nome:</label>
+              <input type="text">
+            </div>
+            <div class="q3 info2">
+              <label>Data de Nascimento:</label>
+              <input type="date">
+            </div>  
+            <div class="q3 info3">
+              <label>Gênero:</label>
+              <input type="text">
+            </div>
+            <div class="q3 info4">
+              <button class="backInfo" type="button">Voltar</button>
+              <button class="nextInfo" type="button">Próximo</button>
+            </div>
+          </div>
+
+          <div class="page pageFour">
+            <div class="q4 end">
+              <label for="cep">Cep:</label>
+              <input type="text" name="cep" id="cep">
+            </div>
+            <div class="q4 end2">
+              <label for="endereço">Endereço:</label>
+              <input type="text" name="endereço" id="endereço">
+            </div>
+            <div class="q4 end3">
+              <label for="numero">Número:</label>
+              <input type="text" name="numero" id="numero">
+            </div>
+            <div class="q4 end4">
+              <label for="bairro">Bairro:</label>
+              <input type="text" name="bairro" id="bairro">
+            </div>
+            <div class="q4 end5">
+              <label for="cidade">Cidade:</label>
+              <input type="text" name="cidade" id="cidade">
+            </div>
+            <div class="q4 end6">
+              <label for="estado">Estado:</label>
+              <input type="text" name="estado" id="estado">
+            </div>
+            <div class="q4 end7">
+              <button class="backEnd" type="button">Voltar</button>
+              <button class="nextEnd" type="button">Próximo</button>
+            </div>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
