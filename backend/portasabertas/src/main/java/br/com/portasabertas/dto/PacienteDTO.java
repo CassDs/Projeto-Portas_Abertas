@@ -23,6 +23,7 @@ public class PacienteDTO {
                     .id(paciente.getId())
                     .nome(paciente.getNome())
                     .relato(paciente.getRelato())
+                    .telefone(paciente.getTelefone())
                     .build();
         }).collect(Collectors.toList());
     }
