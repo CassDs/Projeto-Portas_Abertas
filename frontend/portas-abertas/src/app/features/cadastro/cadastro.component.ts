@@ -21,6 +21,7 @@ export class CadastroComponent implements OnInit {
     const pageFive = document.querySelector(".pageFive");
     const pageSix = document.querySelector(".pageSix");
     const pageSeven = document.querySelector(".pageSeven");
+    const pageFinal = document.querySelector(".pageFinal");
     //Buton Inicial
     const firtNextBtn = document.querySelector(".nextBtn");
 
@@ -97,10 +98,10 @@ export class CadastroComponent implements OnInit {
       pageSix.setAttribute("style", "visibility: visible;");
     });  
 
-    /*nextTxt.addEventListener("click", function(){
+    nextTxt.addEventListener("click", function(){
       pageSeven.setAttribute("style", "visibility: hidden;");
-      pageSeven.setAttribute("style", "visibility: visible;");  
-    });*/
+      pageFinal.setAttribute("style", "visibility: visible;");  
+    });
 
 
   }

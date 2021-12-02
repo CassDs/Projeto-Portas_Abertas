@@ -136,7 +136,7 @@
 //q3
 .page .q3{
 
- margin-left: -39.5cm;
+ margin-left: -35.5cm;
  font-size: 24px;
  font-weight: bold;
 }
@@ -152,14 +152,14 @@
 }
 .page .info2{
   margin-top: 0.6cm;
-  margin-left: -41.52cm;
+  margin-left: -37.52cm;
 }
 .page .info2 input{
   width: 160px;
 }
 .page .info3{
   margin-top: 0.6cm;
-  margin-left: -44.51cm;
+  margin-left: -40.51cm;
 }
 .page .info3 input{
   width: 180px;
@@ -189,7 +189,7 @@
 }
 .page .info4{
   margin-top: 2.1cm;
-  margin-left: -29cm;
+  margin-left: -25cm;
 }
 .pageThree{
   margin-top: 1cm;
@@ -207,42 +207,42 @@
   padding-left: 15px;
 }
 .page .end{
-  margin-left: -62.88cm;
+  margin-left: -57.58cm;
 }
 .page .end input{
   width: 110px;
 }
 .page .end2{
   margin-top: 0.3cm;
-  margin-left: -54.80cm;
+  margin-left: -49.50cm;
 }
 .page .end2 input{
   width: 360px;
 }
 .page .end3{
   margin-top: 0.3cm;
-  margin-left: -46.38cm;
+  margin-left: -41.08cm;
 }
 .page .end3 input{
   width: 60px;
 }
 .page .end4{
   margin-top: -0.7cm;
-  margin-left: -59.87cm;
+  margin-left: -54.57cm;
 }
 .page .end4 input{
   width: 200px;
 }
 .page .end5{
   margin-top: 0.3cm;
-  margin-left: -61.76cm;
+  margin-left: -56.31cm;
 }
 .page .end5 input{
   width: 130px;
 }
 .page .end6{
   margin-top: -0.7cm;
-  margin-left: -48.35cm;
+  margin-left: -42.90cm;
 }
 .page .end6 input{
   width: 140px;
@@ -275,7 +275,7 @@
 }
 .page .end7{
   margin-top: 1.9cm;
-  margin-left: -45cm;
+  margin-left: -39cm;
 }
 .pageFour{
   margin-top: 0.8cm;
@@ -293,21 +293,21 @@
   padding-left: 15px;
 }
 .page .cont{
-  margin-left: -75.6cm;
+  margin-left: -67.1cm;
 }
 .page .cont input{
   width: 300px;
 }
 .page .cont2{
   margin-top: 0.3cm;
-  margin-left: -71.5cm;
+  margin-left: -63cm;
 }
 .page .cont2 input{
   width: 200px;
 }
 .page .cont3{
   margin-top: 0.3cm;
-  margin-left: -73.36cm;
+  margin-left: -64.86cm;
 }
 .page .cont3 input{
   width: 200px;
@@ -318,8 +318,8 @@
   margin-right: 10px;
 }
 .page .cont4{
-  margin-top: 3cm;
-  margin-left: -61.5cm;
+  margin-top: 2cm;
+  margin-left: -53cm;
 }
 .page .cont4 button{
   margin-right: 10px;
@@ -340,7 +340,7 @@
   background: #00bfff;
 }
 .pageFive{
-  margin-top: 0.8cm;
+  margin-top: 1.5cm;
   visibility: hidden;
 }
 //q6
@@ -350,22 +350,22 @@
   font-weight: bold;
 }
 .page .esc{
-  margin-left: -88cm;
+  margin-left: -77.3cm;
 }
 .page .esc input{
   width: 350px;
 }
 .page .esc2{
   margin-top: 0.3cm;
-  margin-left: -90.38cm;
+  margin-left: -79.68cm;
 }
 .page .esc3{
   margin-top: 0.3cm;
-  margin-left: -89.32cm;
+  margin-left: -78.62cm;
 }
 .page .esc4{
-  margin-top: 1.5cm;
-  margin-left: -77cm;
+  margin-top: 1.3cm;
+  margin-left: -67cm;
 }
 .q6 input,
 .q6 select{
@@ -398,7 +398,7 @@
   background: #00bfff;
 }
 .pageSix{
-  margin-top: 0.8cm;
+  margin-top: 1cm;
   visibility: hidden;
 }
 //q7
@@ -409,11 +409,11 @@
 .txt p{
   font-size: 18px;
   margin-top: 1.5cm;
-  margin-left: -110cm;
+  margin-left: -97.5cm;
 }
 .txt2{
   margin-top: -2.7cm;
-  margin-left: -95cm;
+  margin-left: -82.5cm;
 }
 .page textarea{
   border: 1px solid lightblue;
@@ -424,7 +424,7 @@
 }
 .page .txt3{
   margin-top: 2cm;
-  margin-left: -94cm;
+  margin-left: -81cm;
 }
 .page .txt3 button{
   margin-right: 10px;
@@ -446,10 +446,28 @@
 .pageSeven{
   visibility: hidden;
 }
-//
+//q8
+.q8{
+  margin-top: 1cm;
+  margin-left: -104.8cm;
+}
+.page .fin{
+  margin-left: -104.8cm;
+  font-size: 24px;
+}
+.page .fin2{
+  font-size: 42px;
+  font-weight: 600;
+}
+.page .fin3{
+  font-size: 18px;
+}
+.pageFinal{
+  visibility: hidden;
+}
 .container .form-outer{
   width: 100%;
-  overflow: hidden;
+  //overflow: hidden;
 }
 .container .page{
   margin-left: 4cm;
