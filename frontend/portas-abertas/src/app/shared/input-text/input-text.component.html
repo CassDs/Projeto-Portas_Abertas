@@ -1,0 +1,7 @@
+<input
+  class="form-control"
+  [formControl]="control"
+  [placeholder]="placeholder"
+  [type]="type"
+  (keyup)="emit($event.target.value)"
+/>

@@ -1,76 +1,4 @@
-// NavBar
-*{
-    margin: 0;
-    padding: 0;
-  }
-  header {
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    right: 0;
-    width: 100%;
-  }
-  a {
-    color: #06446b;
-    text-decoration: none;
-    transition: 0.3s;
-  }
-  a:hover {
-    opacity: 0.7;
-  }
-  .logo {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-  }
-  nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, Helvetica, sans-serif;
-    background: #fff;
-    height: 8vh;
-    text-shadow: 0 0 3px white;
-    font-size: 18px;
-    font-family: "Voltaire", sans-serif;
-  }
-.nav-logo,
-.nav-list {
-  list-style: none;
-  display: flex;
-}
-.nav-logo {
-  margin-left: -150px;
-}
-.nav-list {
-  margin-right: -150px;
-}
-.nav-logo a {
-  letter-spacing: 3px;
-  margin-top: 23px;
-}
-.nav-list li {
-  letter-spacing: 3px;
-  margin: 10px;
-}
-.nav-list li a.active {
-  text-decoration: none;
-  color: white;
-  padding: 2px 5px;
-  text-transform: uppercase;
-  display: inline-block;
-  text-shadow: 0 0 3px #00bfff;
-}
-.nav-list li a.active {
-  background: #06446b;
-  border-radius: 5px;
-}
-.nav-list li a.active:hover {
-  color: #00ced1;
-}
-// Fim NavBar
-.pageCad{
+.pageCad {
   position: relative;
   display: flex;
   width: 100%;
@@ -80,7 +8,7 @@
   min-height: 100vh;
   background: #06446b;
 }
-.container{
+.container {
   position: fixed;
   width: 580px;
   background: #fff;
@@ -89,7 +17,7 @@
   padding: 50px 35px 10px 35px;
   color: #06446b;
 }
-.container .p1{
+.container .p1 {
   position: relative;
   font-family: "Voltaire", sans-serif;
   font-size: 35px;
@@ -97,79 +25,77 @@
   margin: 0 0 30px 0;
 }
 // Questionario cadastro
-.container .form-outer .page .imgTitle{
+.container .form-outer .page .imgTitle {
   margin-left: -1.7cm;
   margin-top: -2.4cm;
 }
-.container .form-outer .page .title .h1{
+.container .form-outer .page .title .h1 {
   margin-top: -3cm;
 }
-.container .form-outer .page .field .inicia{
+.container .form-outer .page .field .inicia {
   width: 100px;
   margin-top: 0.2cm;
   margin-right: 1.5cm;
 }
-.pageOne{
+.pageOne {
   height: 320px;
   visibility: visible;
 }
 //q2
-.container .form-outer .page .q2 p{
+.container .form-outer .page .q2 p {
   width: 600px;
   margin-left: -14.38cm;
   margin-top: 2cm;
   font-weight: bold;
 }
-.container .form-outer .page .qB2{
+.container .form-outer .page .qB2 {
   display: flex;
   width: 600px;
   margin-left: -15.5cm;
   margin-top: 3cm;
 }
-.container .form-outer .page .qB2 button{
+.container .form-outer .page .qB2 button {
   width: 220px;
   margin-left: 10px;
 }
-.pageTwo{
+.pageTwo {
   visibility: hidden;
 }
 //q3
-.page .q3{
-
- margin-left: -35.5cm;
- font-size: 24px;
- font-weight: bold;
+.page .q3 {
+  margin-left: -35.5cm;
+  font-size: 24px;
+  font-weight: bold;
 }
-.q3 input{
+.q3 input {
   border: 1px solid lightblue;
   border-radius: 5px;
   font-size: 18px;
   padding-left: 15px;
 }
-.page .info1 input{
+.page .info1 input {
   width: 380px;
-  
 }
-.page .info2{
+.page .info2 {
   margin-top: 0.6cm;
   margin-left: -37.52cm;
 }
-.page .info2 input{
+.page .info2 input {
   width: 160px;
 }
-.page .info3{
+.page .info3 {
   margin-top: 0.6cm;
   margin-left: -40.51cm;
 }
-.page .info3 input{
+.page .info3 input {
   width: 180px;
 }
 .page .info1 label,
 .page .info2 label,
-.page .info3 label{
+.page .info3 label {
   margin-right: 10px;
 }
-.q3 button{
+.q3 button {
   margin-right: 10px;
   width: 100px;
   height: 30px;
@@ -184,67 +110,67 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.q3 button:hover{
+.q3 button:hover {
   background: #00bfff;
 }
-.page .info4{
+.page .info4 {
   margin-top: 2.1cm;
   margin-left: -25cm;
 }
-.pageThree{
+.pageThree {
   margin-top: 1cm;
   visibility: hidden;
 }
 //q4
-.q4{
+.q4 {
   font-size: 24px;
   font-weight: bold;
 }
-.q4 input{
+.q4 input {
   border: 1px solid lightblue;
   border-radius: 5px;
   font-size: 18px;
   padding-left: 15px;
 }
-.page .end{
+.page .end {
   margin-left: -57.58cm;
 }
-.page .end input{
+.page .end input {
   width: 110px;
 }
-.page .end2{
+.page .end2 {
   margin-top: 0.3cm;
-  margin-left: -49.50cm;
+  margin-left: -49.5cm;
 }
-.page .end2 input{
+.page .end2 input {
   width: 360px;
 }
-.page .end3{
+.page .end3 {
   margin-top: 0.3cm;
   margin-left: -41.08cm;
 }
-.page .end3 input{
+.page .end3 input {
   width: 60px;
 }
-.page .end4{
+.page .end4 {
   margin-top: -0.7cm;
   margin-left: -54.57cm;
 }
-.page .end4 input{
+.page .end4 input {
   width: 200px;
 }
-.page .end5{
+.page .end5 {
   margin-top: 0.3cm;
   margin-left: -56.31cm;
 }
-.page .end5 input{
+.page .end5 input {
   width: 130px;
 }
-.page .end6{
+.page .end6 {
   margin-top: -0.7cm;
-  margin-left: -42.90cm;
+  margin-left: -42.9cm;
 }
-.page .end6 input{
+.page .end6 input {
   width: 140px;
 }
 .page .end label,
@@ -252,10 +178,10 @@
 .page .end3 label,
 .page .end4 label,
 .page .end5 label,
-.page .end6 label{
+.page .end6 label {
   margin-right: 10px;
 }
-.page .end7 button{
+.page .end7 button {
   margin-right: 10px;
   width: 100px;
   height: 30px;
@@ -270,58 +196,58 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.page .end7 button:hover{
+.page .end7 button:hover {
   background: #00bfff;
 }
-.page .end7{
+.page .end7 {
   margin-top: 1.9cm;
   margin-left: -39cm;
 }
-.pageFour{
+.pageFour {
   margin-top: 0.8cm;
   visibility: hidden;
 }
 //q5
-.q5{
+.q5 {
   font-size: 24px;
   font-weight: bold;
 }
-.q5 input{
+.q5 input {
   border: 1px solid lightblue;
   border-radius: 5px;
   font-size: 18px;
   padding-left: 15px;
 }
-.page .cont{
+.page .cont {
   margin-left: -67.1cm;
 }
-.page .cont input{
+.page .cont input {
   width: 300px;
 }
-.page .cont2{
+.page .cont2 {
   margin-top: 0.3cm;
   margin-left: -63cm;
 }
-.page .cont2 input{
+.page .cont2 input {
   width: 200px;
 }
-.page .cont3{
+.page .cont3 {
   margin-top: 0.3cm;
   margin-left: -64.86cm;
 }
-.page .cont3 input{
+.page .cont3 input {
   width: 200px;
 }
 .page .cont label,
 .page .cont2 label,
-.page .cont3 label{
+.page .cont3 label {
   margin-right: 10px;
 }
-.page .cont4{
+.page .cont4 {
   margin-top: 2cm;
   margin-left: -53cm;
 }
-.page .cont4 button{
+.page .cont4 button {
   margin-right: 10px;
   width: 100px;
   height: 30px;
@@ -336,50 +262,50 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.page .cont4 button:hover{
+.page .cont4 button:hover {
   background: #00bfff;
 }
-.pageFive{
+.pageFive {
   margin-top: 1.5cm;
   visibility: hidden;
 }
 //q6
-.q6{
+.q6 {
   margin-left: -95cm;
   font-size: 24px;
   font-weight: bold;
 }
-.page .esc{
+.page .esc {
   margin-left: -77.3cm;
 }
-.page .esc input{
+.page .esc input {
   width: 350px;
 }
-.page .esc2{
+.page .esc2 {
   margin-top: 0.3cm;
   margin-left: -79.68cm;
 }
-.page .esc3{
+.page .esc3 {
   margin-top: 0.3cm;
   margin-left: -78.62cm;
 }
-.page .esc4{
+.page .esc4 {
   margin-top: 1.3cm;
   margin-left: -67cm;
 }
 .q6 input,
-.q6 select{
+.q6 select {
   border: 1px solid lightblue;
   border-radius: 5px;
   font-size: 18px;
-  padding-left: 15px
+  padding-left: 15px;
 }
 .page .esc label,
 .page .esc2 label,
-.page .esc3 label{
+.page .esc3 label {
   margin-right: 10px;
 }
-.page .esc4 button{
+.page .esc4 button {
   margin-right: 10px;
   width: 100px;
   height: 30px;
@@ -394,39 +320,39 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.page .esc4 button:hover{
+.page .esc4 button:hover {
   background: #00bfff;
 }
-.pageSix{
+.pageSix {
   margin-top: 1cm;
   visibility: hidden;
 }
 //q7
-.q7{
+.q7 {
   font-size: 16px;
   font-weight: bold;
 }
-.txt p{
+.txt p {
   font-size: 18px;
   margin-top: 1.5cm;
   margin-left: -97.5cm;
 }
-.txt2{
+.txt2 {
   margin-top: -2.7cm;
   margin-left: -82.5cm;
 }
-.page textarea{
+.page textarea {
   border: 1px solid lightblue;
   border-radius: 5px;
   font-size: 18px;
   padding-left: 15px;
   height: 110px;
 }
-.page .txt3{
+.page .txt3 {
   margin-top: 2cm;
   margin-left: -81cm;
 }
-.page .txt3 button{
+.page .txt3 button {
   margin-right: 10px;
   width: 110px;
   height: 30px;
@@ -440,66 +366,66 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.page .txt3 button:hover{
+.page .txt3 button:hover {
   background: #00bfff;
 }
-.pageSeven{
+.pageSeven {
   visibility: hidden;
 }
 //q8
-.q8{
+.q8 {
   margin-top: 1cm;
   margin-left: -104.8cm;
 }
-.page .fin{
+.page .fin {
   margin-left: -104.8cm;
   font-size: 24px;
 }
-.page .fin2{
+.page .fin2 {
   font-size: 42px;
   font-weight: 600;
 }
-.page .fin3{
+.page .fin3 {
   font-size: 18px;
 }
-.pageFinal{
+.pageFinal {
   visibility: hidden;
 }
-.container .form-outer{
+.container .form-outer {
   width: 100%;
   //overflow: hidden;
 }
-.container .page{
+.container .page {
   margin-left: 4cm;
 }
-.form-outer form{
+.form-outer form {
   display: flex;
   width: 400%;
 }
-.form-outer form .page{
+.form-outer form .page {
   width: 25%;
 }
-.form-outer form .page .title{
+.form-outer form .page .title {
   text-align: left;
   font-size: 25px;
   font-weight: 500;
 }
-.form-outer form .page .field{
+.form-outer form .page .field {
   height: 45px;
   width: 330px;
 }
-.form-outer form .page .field label{
+.form-outer form .page .field label {
   position: absolute;
   top: -30px;
   font-weight: 500;
 }
-.form-outer form .page .field input{
+.form-outer form .page .field input {
   border: 1px solid lightblue;
   border-radius: 5px;
   font-size: 18px;
   padding-left: 15px;
 }
-.form-outer form .page .field button{
+.form-outer form .page .field button {
   width: 100%;
   height: calc(100% + 5px);
   margin-top: -20px;
@@ -513,7 +439,6 @@
   text-transform: uppercase;
   cursor: pointer;
 }
-.form-outer form .page .field button:hover{
+.form-outer form .page .field button:hover {
   background: #00bfff;
 }
-
