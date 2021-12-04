@@ -194,7 +194,6 @@ nav {
   width: 290px;
   border-radius: 10px;
 }
-
 .hiago,
 .gina,
 .ron,
@@ -213,7 +212,14 @@ nav {
 .gina img,
 .ron img,
 .hermione img {
-  border-radius: 90px;
+  border-radius: 80px;
+}
+.hiago h3,
+.gina h3,
+.ron h3,
+.hermione h3{
+  font-family: "Voltaire", sans-serif;
+  color: white;
 }
 .hiago p,
 .gina p,
@@ -222,3 +228,176 @@ nav {
   font-family: "Voltaire", sans-serif;
   color: white;
 }
+.wave {
+  content: "";
+  position: relative;
+  bottom: -110px;
+  left: 0px;
+  height: 110px;
+}
+.contato {
+  background: #06446b;
+  height: 690px;
+}
+.contato-txt {
+  position: relative;
+  text-align: center;
+  font-family: "Voltaire", sans-serif;
+  font-size: 30px;
+  top: 70px;
+  color: white;
+}
+.borda-contato {
+  position: relative;
+  width: 160px;
+  height: 2px;
+  background: white;
+  margin: 40px auto;
+  top: 60px;
+}
+.form-contato{
+  background: #000080;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 420px;
+  border-radius: 10px;
+  bottom: -80px;
+  margin-left: 280px;
+  align-items: center;
+  text-align: center;
+}
+.contato form{
+  width: 100%;
+  max-width: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+.contato form label,
+.contato form input,
+.contato form textarea{
+    display: block;
+    width: 100%;
+    height: 9px;
+}
+.contato form label {
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+.contato form input,
+.contato form textarea {
+font: inherit;
+padding: 0.8rem;
+margin-bottom: 1rem;
+border: 1px solid transparent;
+border-radius: 8px;
+transition: border-color, box-shadow 0.2s;
+}
+
+.contato form textarea {
+height: 120px;
+resize: vertical;
+}
+
+.contato form input:hover,
+.contato form input:focus,
+.contato form textarea:hover,
+.contato form textarea:focus {
+outline: none;
+border-color: #09d;
+box-shadow: 0 0 0 3px #4dc8ff;
+}
+
+.contato form button {
+  position: relative;
+  background: #0072c4;
+  color: #fff;
+  font: inherit;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+  height: 40px;
+  width: 80px;
+}
+
+.contato form button:hover,
+.contato form button:focus {
+outline: none;
+background: #09d;
+}
+.contato p{
+  max-width: 600px;
+  margin: 15px auto;
+  line-height: 1.4;
+  letter-spacing: 2px;
+}
+.cont-txt{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  border-radius: 10px;
+  bottom: 320px;
+  margin-left: 680px;
+  align-items: center;
+  text-align: center;
+}
+.contato h1,
+.contato h2,
+.contato h3{
+  font-family: "Voltaire", sans-serif;
+  color: #fff;
+}
+.contato h1{
+  font-size: 42px;
+}
+.contato h2{
+  font-size: 36px;
+}
+.contato h3{
+  font-size: 24px;
+}
+.row a{
+  position: relative;
+  bottom: -20px;
+  color: #fff;
+  font-size: 40px;
+
+}
+.what{
+  margin-right: 20px;
+}
+.arrow-btn{
+  position: relative;
+  bottom: 180px;
+  margin-left: 34.1cm;
+  background: #fff;
+  width: 48px;
+  height: 44px;
+  align-items: center;
+  text-align: center;
+}
+.arrow-btn a{
+  color: #000080;
+  font-size: 36px;
+}
+.copy{
+  margin-top: -5.6cm;
+  margin-left: -19cm;
+  color: #fff;
+  font-size: small;
+}
+.mozila{
+  margin-top: -8cm;
+}
+

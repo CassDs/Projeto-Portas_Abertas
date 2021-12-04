@@ -1,0 +1,444 @@
+.pageCad {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #06446b;
+}
+.container {
+  position: fixed;
+  width: 580px;
+  background: #fff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 50px 35px 10px 35px;
+  color: #06446b;
+}
+.container .p1 {
+  position: relative;
+  font-family: "Voltaire", sans-serif;
+  font-size: 35px;
+  font-weight: 600;
+  margin: 0 0 30px 0;
+}
+// Questionario cadastro
+.container .form-outer .page .imgTitle {
+  margin-left: -1.7cm;
+  margin-top: -2.4cm;
+}
+.container .form-outer .page .title .h1 {
+  margin-top: -3cm;
+}
+.container .form-outer .page .field .inicia {
+  width: 100px;
+  margin-top: 0.2cm;
+  margin-right: 1.5cm;
+}
+.pageOne {
+  height: 320px;
+  visibility: visible;
+}
+//q2
+.container .form-outer .page .q2 p {
+  width: 600px;
+  margin-left: -14.38cm;
+  margin-top: 2cm;
+  font-weight: bold;
+}
+.container .form-outer .page .qB2 {
+  display: flex;
+  width: 600px;
+  margin-left: -15.5cm;
+  margin-top: 3cm;
+}
+.container .form-outer .page .qB2 button {
+  width: 220px;
+  margin-left: 10px;
+}
+.pageTwo {
+  visibility: hidden;
+}
+//q3
+.page .q3 {
+  margin-left: -35.5cm;
+  font-size: 24px;
+  font-weight: bold;
+}
+.q3 input {
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.page .info1 input {
+  width: 380px;
+}
+.page .info2 {
+  margin-top: 0.6cm;
+  margin-left: -37.52cm;
+}
+.page .info2 input {
+  width: 160px;
+}
+.page .info3 {
+  margin-top: 0.6cm;
+  margin-left: -40.51cm;
+}
+.page .info3 input {
+  width: 180px;
+}
+.page .info1 label,
+.page .info2 label,
+.page .info3 label {
+  margin-right: 10px;
+}
+.q3 button {
+  margin-right: 10px;
+  width: 100px;
+  height: 30px;
+  margin-top: -20px;
+  border: none;
+  border-radius: 3px;
+  background: #000080;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.q3 button:hover {
+  background: #00bfff;
+}
+.page .info4 {
+  margin-top: 2.1cm;
+  margin-left: -25cm;
+}
+.pageThree {
+  margin-top: 1cm;
+  visibility: hidden;
+}
+//q4
+.q4 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.q4 input {
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.page .end {
+  margin-left: -57.58cm;
+}
+.page .end input {
+  width: 110px;
+}
+.page .end2 {
+  margin-top: 0.3cm;
+  margin-left: -49.5cm;
+}
+.page .end2 input {
+  width: 360px;
+}
+.page .end3 {
+  margin-top: 0.3cm;
+  margin-left: -41.08cm;
+}
+.page .end3 input {
+  width: 60px;
+}
+.page .end4 {
+  margin-top: -0.7cm;
+  margin-left: -54.57cm;
+}
+.page .end4 input {
+  width: 200px;
+}
+.page .end5 {
+  margin-top: 0.3cm;
+  margin-left: -56.31cm;
+}
+.page .end5 input {
+  width: 130px;
+}
+.page .end6 {
+  margin-top: -0.7cm;
+  margin-left: -42.9cm;
+}
+.page .end6 input {
+  width: 140px;
+}
+.page .end label,
+.page .end2 label,
+.page .end3 label,
+.page .end4 label,
+.page .end5 label,
+.page .end6 label {
+  margin-right: 10px;
+}
+.page .end7 button {
+  margin-right: 10px;
+  width: 100px;
+  height: 30px;
+  margin-top: -20px;
+  border: none;
+  border-radius: 3px;
+  background: #000080;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.page .end7 button:hover {
+  background: #00bfff;
+}
+.page .end7 {
+  margin-top: 1.9cm;
+  margin-left: -39cm;
+}
+.pageFour {
+  margin-top: 0.8cm;
+  visibility: hidden;
+}
+//q5
+.q5 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.q5 input {
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.page .cont {
+  margin-left: -67.1cm;
+}
+.page .cont input {
+  width: 300px;
+}
+.page .cont2 {
+  margin-top: 0.3cm;
+  margin-left: -63cm;
+}
+.page .cont2 input {
+  width: 200px;
+}
+.page .cont3 {
+  margin-top: 0.3cm;
+  margin-left: -64.86cm;
+}
+.page .cont3 input {
+  width: 200px;
+}
+.page .cont label,
+.page .cont2 label,
+.page .cont3 label {
+  margin-right: 10px;
+}
+.page .cont4 {
+  margin-top: 2cm;
+  margin-left: -53cm;
+}
+.page .cont4 button {
+  margin-right: 10px;
+  width: 100px;
+  height: 30px;
+  margin-top: -20px;
+  border: none;
+  border-radius: 3px;
+  background: #000080;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.page .cont4 button:hover {
+  background: #00bfff;
+}
+.pageFive {
+  margin-top: 1.5cm;
+  visibility: hidden;
+}
+//q6
+.q6 {
+  margin-left: -95cm;
+  font-size: 24px;
+  font-weight: bold;
+}
+.page .esc {
+  margin-left: -77.3cm;
+}
+.page .esc input {
+  width: 350px;
+}
+.page .esc2 {
+  margin-top: 0.3cm;
+  margin-left: -79.68cm;
+}
+.page .esc3 {
+  margin-top: 0.3cm;
+  margin-left: -78.62cm;
+}
+.page .esc4 {
+  margin-top: 1.3cm;
+  margin-left: -67cm;
+}
+.q6 input,
+.q6 select {
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.page .esc label,
+.page .esc2 label,
+.page .esc3 label {
+  margin-right: 10px;
+}
+.page .esc4 button {
+  margin-right: 10px;
+  width: 100px;
+  height: 30px;
+  margin-top: 50px;
+  border: none;
+  border-radius: 3px;
+  background: #000080;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.page .esc4 button:hover {
+  background: #00bfff;
+}
+.pageSix {
+  margin-top: 1cm;
+  visibility: hidden;
+}
+//q7
+.q7 {
+  font-size: 16px;
+  font-weight: bold;
+}
+.txt p {
+  font-size: 18px;
+  margin-top: 1.5cm;
+  margin-left: -97.5cm;
+}
+.txt2 {
+  margin-top: -2.7cm;
+  margin-left: -82.5cm;
+}
+.page textarea {
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 15px;
+  height: 110px;
+}
+.page .txt3 {
+  margin-top: 2cm;
+  margin-left: -81cm;
+}
+.page .txt3 button {
+  margin-right: 10px;
+  width: 110px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  background: #000080;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.page .txt3 button:hover {
+  background: #00bfff;
+}
+.pageSeven {
+  visibility: hidden;
+}
+//q8
+.q8 {
+  margin-top: 1cm;
+  margin-left: -104.8cm;
+}
+.page .fin {
+  margin-left: -104.8cm;
+  font-size: 24px;
+}
+.page .fin2 {
+  font-size: 42px;
+  font-weight: 600;
+}
+.page .fin3 {
+  font-size: 18px;
+}
+.pageFinal {
+  visibility: hidden;
+}
+.container .form-outer {
+  width: 100%;
+  //overflow: hidden;
+}
+.container .page {
+  margin-left: 4cm;
+}
+.form-outer form {
+  display: flex;
+  width: 400%;
+}
+.form-outer form .page {
+  width: 25%;
+}
+.form-outer form .page .title {
+  text-align: left;
+  font-size: 25px;
+  font-weight: 500;
+}
+.form-outer form .page .field {
+  height: 45px;
+  width: 330px;
+}
+.form-outer form .page .field label {
+  position: absolute;
+  top: -30px;
+  font-weight: 500;
+}
+.form-outer form .page .field input {
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.form-outer form .page .field button {
+  width: 100%;
+  height: calc(100% + 5px);
+  margin-top: -20px;
+  border: none;
+  border-radius: 5px;
+  background: #000080;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.form-outer form .page .field button:hover {
+  background: #00bfff;
+}

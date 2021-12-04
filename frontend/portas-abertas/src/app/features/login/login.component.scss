@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Voltaire", sans-serif;
+  }
+  header {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  a {
+    color: #06446b;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  a:hover {
+    opacity: 0.7;
+  }
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, Helvetica, sans-serif;
+    background: #fff;
+    height: 8vh;
+    text-shadow: 0 0 3px white;
+    font-size: 18px;
+    font-family: "Voltaire", sans-serif;
+  }
+.nav-logo,
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+.nav-logo {
+  margin-left: -150px;
+}
+.nav-list {
+  margin-right: -150px;
+}
+.nav-logo a {
+  letter-spacing: 3px;
+  margin-top: 23px;
+}
+.nav-list li {
+  letter-spacing: 3px;
+  margin: 10px;
+}
+.nav-list li a.active {
+  text-decoration: none;
+  color: white;
+  padding: 2px 5px;
+  text-transform: uppercase;
+  display: inline-block;
+  text-shadow: 0 0 3px #00bfff;
+}
+.nav-list li a.active {
+  background: #06446b;
+  border-radius: 5px;
+}
+.nav-list li a.active:hover {
+  color: #00ced1;
+}
+.pageLogin{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background: #06446b;
+}
+section .imgBx:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(225deg, #0000,#06446b);
+    mix-blend-mode: screen;
+}
+section .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+section .contentBx{
+    position: relative;
+    margin-left: 25cm;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+.formBx{
+    width: 190px;
+}
+.formBx h2{
+    font-family: "Voltaire", sans-serif;
+    color: #fff;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #fff;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+section .contentBx .formBx .inputBx{
+    margin-bottom: 20px;
+}
+section .contentBx .formBx .inputBx span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+section .contentBx .formBx .inputBx input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    font-weight: 400;
+    border: 1px solid #fff;
+    letter-spacing: 1px;
+    color: #fff;
+    background: transparent;
+    border-radius: 30px ;
+}
+section .contentBx .formBx .inputBx input[type="submit"]{
+    background: #fff;
+    color: #000080;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+section .contentBx .formBx .inputBx input[type="submit"]:hover{
+    background: #87ceeb;
+}
+section .contentBx .formBx .remember{
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+}
+section .contentBx .formBx .inputBx p a{
+    color:  #fff;
+}
