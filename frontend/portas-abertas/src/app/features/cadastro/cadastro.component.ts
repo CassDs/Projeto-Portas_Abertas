@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
@@ -104,6 +105,28 @@ export class CadastroComponent implements OnInit {
     });
 
 
+
+    let cep = <HTMLInputElement>document.getElementById("cep");
+    let endereço = <HTMLInputElement>document.getElementById("endereço");
+    let bairro = <HTMLInputElement>document.getElementById("bairro");
+    let cidade = <HTMLInputElement>document.getElementById("cidade");
+    let estado = <HTMLInputElement>document.getElementById("estado");
+
+    cep.value = "01001000";
+
+    cep.addEventListener("blur", function(e){
+      let cep = (<HTMLInputElement>e.target).value;
+      let script = document.createElement('script');
+      script.src = "viacep.com.br/ws/01001000/json/?callback=popularForm";
+      document.body.appendChild(script);
+    });
+
+    function popularForm(resposta){
+      endereço.value = resposta.logradoro;
+      bairro.value = resposta.bairro;
+      cidade.value = resposta.cidade;
+      estado.value = resposta.localidade;
+    };
   }
 
 }

@@ -4,8 +4,10 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastroComponent } from './features/cadastro/cadastro.component';
 import { HomeComponent } from './features/home/home.component';
 import { LoginComponent } from './features/login/login.component';
+import { SuperAdminComponent } from './features/super-admin/super-admin.component';
 
 const APP_ROUTES: Routes = [
+    { path: 'superAdmin', component: SuperAdminComponent },
     { path: 'cadastro', component: CadastroComponent },
     { path: 'login', component: LoginComponent },
     { path: '', component: HomeComponent }
