@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 
 @Builder
@@ -12,7 +13,7 @@ import java.time.LocalDate;
 public class CreatePacienteRequestModel {
     @NotNull @NotBlank(message = "Informe a conhecimento.")
     String conhecimento;
-    @NotNull @NotBlank(message = "Informe a data de nascimento.")
+    @NotNull
     LocalDate dataNascimento;
     @NotNull @NotBlank(message = "Informe a escolaridade.")
     String escolaridade;

@@ -10,14 +10,15 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("paciente")
+@CrossOrigin("http://localhost:4200")
+@RequestMapping("/api/pacientes")
 public class PacienteController {
     @Autowired
     PacienteService pacienteService;
 
     @GetMapping
-    public List<PacienteDTO> getAllPacientes() {
-        return pacienteService.getAllPacientes();
+    public ResponseEntity<List<PacienteDTO>> getAllPacientes() {
+        return ResponseEntity.ok(pacienteService.getAllPacientes());
     }
 
     @PostMapping

@@ -56,13 +56,10 @@ public class PacienteService {
                     .telefone(requestModel.getTelefone())
                     .build();
 
-
             pacienteRepository.save(paciente);
         } else {
             throw new NegocioException((violations.stream().findFirst().get().getMessage()));
         }
-
-
     }
 
 }
