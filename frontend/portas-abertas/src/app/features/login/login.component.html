@@ -1,51 +1,60 @@
 <header>
-    <nav>
-      <ul class="nav-logo">
-        <img
-          src="./../../../assets/img/logoPortas.png"
-          alt="mini-Logo"
-          width="50"
-          height="80"
-        />
-        <a class="logo" href="/">PORTAS ABERTAS</a>
-      </ul>
-      <ul class="nav-list">
-        <li><a routerLink=''>Início</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contato">Contato</a></li>
-        <li><a routerLink="/login" >Parceiros</a></li>
-        <li><a class="active" routerLink="/cadastro-paciente">Cadastre-se</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="pageLogin">
-      <div class="imgBx">
-        <img src="../../../assets/img/imgLogin.jpg">
+  <nav>
+    <ul class="nav-logo">
+      <img
+        src="./../../../assets/img/logoPortas.png"
+        alt="mini-Logo"
+        width="50"
+        height="80"
+      />
+      <a class="logo" href="/">PORTAS ABERTAS</a>
+    </ul>
+    <ul class="nav-list">
+      <li><a routerLink="">Início</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a routerLink="/login">Parceiros</a></li>
+      <li><a class="active" routerLink="/cadastro-paciente">Cadastre-se</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="pageLogin">
+    <div class="imgBx">
+      <img src="../../../assets/img/imgLogin.jpg" />
+    </div>
+    <div class="contentBx">
+      <div class="formBx">
+        <h2>Login</h2>
+        <form>
+          <div class="inputBx">
+            <span>CRP</span>
+            <input
+              type="text"
+              name=""
+              [formControl]="formLogin.controls['crp']"
+            />
+          </div>
+          <div class="inputBx">
+            <span>Senha</span>
+            <input
+              type="password"
+              name=""
+              [formControl]="formLogin.controls['senha']"
+            />
+          </div>
+          <div class="remember">
+            <label><input type="checkbox" name="" />Lembrar-se</label>
+          </div>
+          <div class="inputBx">
+            <button (click)="login()" class="btnEntrar">Entrar</button>
+          </div>
+          <div class="inputBx">
+            <p><a href="#">Esqueci minha senha</a></p>
+          </div>
+        </form>
       </div>
-      <div class="contentBx" >
-        <div class="formBx">
-          <h2>Login</h2>
-            <form>
-              <div class="inputBx">
-                <span>CRP</span>
-                <input type="text" name="">
-              </div>
-              <div class="inputBx">
-                <span>Senha</span>
-                <input type="password" name="">
-              </div>
-              <div class="remember">
-                <label><input type="checkbox" name="">Lembrar-se</label>
-              </div>
-              <div class="inputBx">
-                <input type="submit" value="Entrar" name="">
-              </div>
-              <div class="inputBx">
-                <p><a href="#">Esqueci minha senha</a></p>
-              </div>
-            </form>
-        </div>
-      </div>
-    </section>
-  </main>
+    </div>
+  </section>
+</main>

@@ -10,10 +10,10 @@
       <a class="logo" href="/">PORTAS ABERTAS</a>
     </ul>
     <ul class="nav-list">
-      <li><a routerLink=''>Início</a></li>
+      <li><a routerLink="">Início</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#contato">Contato</a></li>
-      <li><a routerLink="/login" >Parceiros</a></li>
+      <li><a routerLink="/login">Parceiros</a></li>
       <li><a class="active" routerLink="/cadastro-paciente">Cadastre-se</a></li>
     </ul>
   </nav>
@@ -58,17 +58,20 @@
           <div class="page pageThree">
             <div class="q3 info1">
               <label>Nome:</label>
-              <input type="text" />
+              <input type="text" [formControl]="form.controls['nome']" />
             </div>
 
             <div class="q3 info2">
               <label>Data de Nascimento:</label>
-              <input type="date" />
+              <input
+                type="date"
+                [formControl]="form.controls['dataNascimento']"
+              />
             </div>
 
             <div class="q3 info3">
               <label>Gênero:</label>
-              <input type="text" />
+              <input type="text" [formControl]="form.controls['genero']" />
             </div>
             <div class="q3 info4">
               <button class="backInfo" type="button">Voltar</button>
@@ -79,27 +82,57 @@
           <div class="page pageFour">
             <div class="q4 end">
               <label for="cep">Cep:</label>
-              <input type="text" name="cep" id="cep" />
+              <input
+                type="text"
+                name="cep"
+                id="cep"
+                [formControl]="form.controls['cep']"
+              />
             </div>
             <div class="q4 end2">
               <label for="endereço">Endereço:</label>
-              <input type="text" name="endereço" id="endereço" />
+              <input
+                type="text"
+                name="endereço"
+                id="endereço"
+                [formControl]="form.controls['endereco']"
+              />
             </div>
             <div class="q4 end3">
               <label for="numero">Número:</label>
-              <input type="text" name="numero" id="numero" />
+              <input
+                type="text"
+                name="numero"
+                id="numero"
+                [formControl]="form.controls['numero']"
+              />
             </div>
             <div class="q4 end4">
               <label for="bairro">Bairro:</label>
-              <input type="text" name="bairro" id="bairro" />
+              <input
+                type="text"
+                name="bairro"
+                id="bairro"
+                [formControl]="form.controls['bairro']"
+              />
             </div>
             <div class="q4 end5">
               <label for="cidade">Cidade:</label>
-              <input type="text" name="cidade" id="cidade" />
+              <input
+                type="text"
+                name="cidade"
+                id="cidade"
+                [formControl]="form.controls['cidade']"
+              />
             </div>
             <div class="q4 end6">
               <label for="estado">Estado:</label>
-              <input type="text" name="estado" id="estado" />
+              <input
+                type="text"
+                name="estado"
+                id="estado"
+                [formControl]="form.controls['estado']"
+              />
             </div>
             <div class="q4 end7">
               <button class="backEnd" type="button">Voltar</button>
@@ -110,15 +143,18 @@
           <div class="page pageFive">
             <div class="q5 cont">
               <label>E-mail:</label>
-              <input type="text" />
+              <input type="text" [formControl]="form.controls['email']" />
             </div>
             <div class="q5 cont2">
               <label>Telefone com DDD (WhatsApp):</label>
-              <input type="text" />
+              <input type="text" [formControl]="form.controls['telefone']" />
             </div>
             <div class="q5 cont3">
               <label>Outro telefone com DDD:</label>
-              <input type="text" />
+              <input
+                type="text"
+                [formControl]="form.controls['outroTelefone']"
+              />
             </div>
             <div class="q5 cont4">
               <button class="backCont" type="button">Voltar</button>
@@ -129,30 +165,21 @@
           <div class="page pageSix">
             <div class="q6 esc">
               <label>Profissão:</label>
-              <input type="text" />
+              <input type="text" [formControl]="form.controls['profissao']" />
             </div>
             <div class="q6 esc2">
               <label class="label">Escolaridade:</label>
-              <select>
-                <option>Analfabeto</option>
-                <option>Fundamental Incompleto</option>
-                <option>Fundamental Completo</option>
-                <option>Médio Incompleto</option>
-                <option>Médio Completo</option>
-                <option>Superior Incompleto</option>
-                <option>Superior Completo</option>
-                <option>Mestrado</option>
-                <option>Doutorado</option>
-              </select>
+              <input
+                type="text"
+                [formControl]="form.controls['escolaridade']"
+              />
             </div>
             <div class="q6 esc3">
               <label class="label">Como você nos conheceu?</label>
-              <select>
-                <option>Amigo</option>
-                <option>Família</option>
-                <option>Redes Sociais</option>
-                <option>Outros</option>
-              </select>
+              <input
+                type="text"
+                [formControl]="form.controls['conhecimento']"
+              />
             </div>
             <div class="q6 esc4">
               <button class="backEsc" type="button">Voltar</button>
@@ -175,6 +202,7 @@
                 name="message"
                 id="message"
                 placeholder="Escreva sua mensagem"
+                [formControl]="form.controls['comentario']"
               ></textarea>
             </div>
             <div class="q7 txt3">

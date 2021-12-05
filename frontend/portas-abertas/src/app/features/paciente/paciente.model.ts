@@ -1,9 +1,18 @@
-export interface CadastrarPaciente {
+export interface CadastrarPacienteRequestModel {
   nome: string;
-  conhecimento: string;
   dataNascimento: string;
-  escolaridade: string;
+  genero: string;
+  cep: string;
+  endereco: string;
+  numero: string;
+  bairro: string;
+  cidade: string;
+  estado: string;
+  email: string;
   telefone: string;
+  outroTelefone: string;
   profissao: string;
-  relato: string;
+  escolaridade: string;
+  conhecimento: string;
+  comentario: string;
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { CadastrarPaciente } from '../paciente.model';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CadastrarPacienteRequestModel } from '../paciente.model';
 import { PacienteService } from '../paciente.service';
 
 @Component({
@@ -113,13 +113,19 @@ export class CadastroPacienteComponent implements OnInit {
   }
 
   cadastrarPaciente(): void {
-    let cadastrarPaciente: CadastrarPaciente;
-    this.pacienteService.cadastrarPaciente(cadastrarPaciente).subscribe(
+    let cadastrarPaciente: CadastrarPacienteRequestModel =
+      this.form.getRawValue();
+    /*     this.ngxSpinner.show();
+     */ this.pacienteService.cadastrarPaciente(cadastrarPaciente).subscribe(
       () => {
-        /* this.toastrService.success('Cadastrol realizado com sucesso!'); */
+        console.log('sucesso');
       },
       () => {
-        /*  this.toastrService.error('Erro ao realizar cadastro'); */
+        console.log('erro');
+      },
+      () => {
+        /*         this.ngxSpinner.hide();
+         */
       }
     );
   }
@@ -130,11 +136,18 @@ export class CadastroPacienteComponent implements OnInit {
       dataNascimento: this.formbuilder.control(''),
       genero: this.formbuilder.control(''),
       cep: this.formbuilder.control(''),
-      logradouro: this.formbuilder.control(''),
+      endereco: this.formbuilder.control(''),
       numero: this.formbuilder.control(''),
       bairro: this.formbuilder.control(''),
       cidade: this.formbuilder.control(''),
       estado: this.formbuilder.control(''),
+      email: this.formbuilder.control(''),
+      telefone: this.formbuilder.control(''),
+      outroTelefone: this.formbuilder.control(''),
+      profissao: this.formbuilder.control(''),
+      escolaridade: this.formbuilder.control(''),
+      conhecimento: this.formbuilder.control(''),
+      comentario: this.formbuilder.control(''),
     });
   }
 }
