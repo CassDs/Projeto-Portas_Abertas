@@ -10,12 +10,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SuperAdminComponent } from './features/super-admin/super-admin.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
     CadastroPacienteComponent,
+    SuperAdminComponent,
   ],
   imports: [
     BrowserModule,
