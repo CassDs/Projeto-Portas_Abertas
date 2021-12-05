@@ -25,7 +25,7 @@ public class Paciente {
     LocalDate dataNascimento;
     String genero;
     @Column(name = "relato", columnDefinition="varchar(5000)", length = 5000)
-    String relato;
+    String comentario;
     String escolaridade;
     String profissao;
     String conhecimento;

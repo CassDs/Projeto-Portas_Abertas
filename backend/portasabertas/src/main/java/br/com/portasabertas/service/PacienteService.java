@@ -52,7 +52,7 @@ public class PacienteService {
                     .genero(requestModel.getGenero())
                     .statusPaciente(statusPaciente)
                     .profissao(requestModel.getProfissao())
-                    .relato(requestModel.getRelato())
+                    .comentario(requestModel.getComentario())
                     .telefone(requestModel.getTelefone())
                     .build();
 

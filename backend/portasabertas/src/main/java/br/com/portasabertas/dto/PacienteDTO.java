@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class PacienteDTO {
     Long id;
     String nome;
-    String relato;
+    String comentario;
     String telefone;
 
     public static List<PacienteDTO> convertToPacienteDTOList(List<Paciente> pacienteList) {
@@ -22,7 +22,7 @@ public class PacienteDTO {
             return PacienteDTO.builder()
                     .id(paciente.getId())
                     .nome(paciente.getNome())
-                    .relato(paciente.getRelato())
+                    .comentario(paciente.getComentario())
                     .telefone(paciente.getTelefone())
                     .build();
         }).collect(Collectors.toList());
