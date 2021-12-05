@@ -1,3 +1,75 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Voltaire", sans-serif;
+}
+header {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+}
+a {
+  color: #06446b;
+  text-decoration: none;
+  transition: 0.3s;
+}
+a:hover {
+  opacity: 0.7;
+}
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: system-ui, -apple-system, Helvetica, Arial, Helvetica, sans-serif;
+  background: #fff;
+  height: 8vh;
+  text-shadow: 0 0 3px white;
+  font-size: 18px;
+  font-family: "Voltaire", sans-serif;
+}
+.nav-logo,
+.nav-list {
+list-style: none;
+display: flex;
+}
+.nav-logo {
+margin-left: -150px;
+}
+.nav-list {
+margin-right: -150px;
+}
+.nav-logo a {
+letter-spacing: 3px;
+margin-top: 23px;
+}
+.nav-list li {
+letter-spacing: 3px;
+margin: 10px;
+}
+.nav-list li a.active {
+text-decoration: none;
+color: white;
+padding: 2px 5px;
+text-transform: uppercase;
+display: inline-block;
+text-shadow: 0 0 3px #00bfff;
+}
+.nav-list li a.active {
+background: #06446b;
+border-radius: 5px;
+}
+.nav-list li a.active:hover {
+color: #00ced1;
+}
 .pageCad {
   position: relative;
   display: flex;
@@ -26,16 +98,17 @@
 }
 // Questionario cadastro
 .container .form-outer .page .imgTitle {
-  margin-left: -1.7cm;
+  margin-left: -3.1cm;
   margin-top: -2.4cm;
 }
 .container .form-outer .page .title .h1 {
   margin-top: -3cm;
+  margin-left: -0.4cm;
 }
 .container .form-outer .page .field .inicia {
   width: 100px;
-  margin-top: 0.2cm;
-  margin-right: 1.5cm;
+  margin-top: 0.4cm;
+  margin-left: -2.9cm;
 }
 .pageOne {
   height: 320px;
@@ -51,7 +124,7 @@
 .container .form-outer .page .qB2 {
   display: flex;
   width: 600px;
-  margin-left: -15.5cm;
+  margin-left: -16.2cm;
   margin-top: 3cm;
 }
 .container .form-outer .page .qB2 button {
@@ -63,7 +136,7 @@
 }
 //q3
 .page .q3 {
-  margin-left: -35.5cm;
+  margin-left: -34cm;
   font-size: 24px;
   font-weight: bold;
 }
@@ -78,14 +151,14 @@
 }
 .page .info2 {
   margin-top: 0.6cm;
-  margin-left: -37.52cm;
+  margin-left: -36.52cm;
 }
 .page .info2 input {
   width: 160px;
 }
 .page .info3 {
   margin-top: 0.6cm;
-  margin-left: -40.51cm;
+  margin-left: -39.01cm;
 }
 .page .info3 input {
   width: 180px;
@@ -115,7 +188,7 @@
 }
 .page .info4 {
   margin-top: 2.1cm;
-  margin-left: -25cm;
+  margin-left: -25.5cm;
 }
 .pageThree {
   margin-top: 1cm;
@@ -133,42 +206,42 @@
   padding-left: 15px;
 }
 .page .end {
-  margin-left: -57.58cm;
+  margin-left: -53.58cm;
 }
 .page .end input {
   width: 110px;
 }
 .page .end2 {
   margin-top: 0.3cm;
-  margin-left: -49.5cm;
+  margin-left: -45.5cm;
 }
 .page .end2 input {
-  width: 360px;
+  width: 368px;
 }
 .page .end3 {
   margin-top: 0.3cm;
-  margin-left: -41.08cm;
+  margin-left: -37.08cm;
 }
 .page .end3 input {
   width: 60px;
 }
 .page .end4 {
-  margin-top: -0.7cm;
-  margin-left: -54.57cm;
+  margin-top: -1cm;
+  margin-left: -50.57cm;
 }
 .page .end4 input {
   width: 200px;
 }
 .page .end5 {
-  margin-top: 0.3cm;
-  margin-left: -56.31cm;
+  margin-top: 0.33cm;
+  margin-left: -52.31cm;
 }
 .page .end5 input {
   width: 130px;
 }
 .page .end6 {
-  margin-top: -0.7cm;
-  margin-left: -42.9cm;
+  margin-top: -0.95cm;
+  margin-left: -38.9cm;
 }
 .page .end6 input {
   width: 140px;
@@ -200,8 +273,8 @@
   background: #00bfff;
 }
 .page .end7 {
-  margin-top: 1.9cm;
-  margin-left: -39cm;
+  margin-top: 1.68cm;
+  margin-left: -37.3cm;
 }
 .pageFour {
   margin-top: 0.8cm;
@@ -219,21 +292,21 @@
   padding-left: 15px;
 }
 .page .cont {
-  margin-left: -67.1cm;
+  margin-left: -60.3cm;
 }
 .page .cont input {
   width: 300px;
 }
 .page .cont2 {
   margin-top: 0.3cm;
-  margin-left: -63cm;
+  margin-left: -57.5cm;
 }
 .page .cont2 input {
   width: 200px;
 }
 .page .cont3 {
   margin-top: 0.3cm;
-  margin-left: -64.86cm;
+  margin-left: -59cm;
 }
 .page .cont3 input {
   width: 200px;
@@ -244,8 +317,8 @@
   margin-right: 10px;
 }
 .page .cont4 {
-  margin-top: 2cm;
-  margin-left: -53cm;
+  margin-top: 2.2cm;
+  margin-left: -49.05cm;
 }
 .page .cont4 button {
   margin-right: 10px;
@@ -276,22 +349,22 @@
   font-weight: bold;
 }
 .page .esc {
-  margin-left: -77.3cm;
+  margin-left: -69.6cm;
 }
 .page .esc input {
   width: 350px;
 }
 .page .esc2 {
   margin-top: 0.3cm;
-  margin-left: -79.68cm;
+  margin-left: -72.65cm;
 }
 .page .esc3 {
   margin-top: 0.3cm;
-  margin-left: -78.62cm;
+  margin-left: -71.82cm;
 }
 .page .esc4 {
-  margin-top: 1.3cm;
-  margin-left: -67cm;
+  margin-top: 1.52cm;
+  margin-left: -60.9cm;
 }
 .q6 input,
 .q6 select {
@@ -335,22 +408,23 @@
 .txt p {
   font-size: 18px;
   margin-top: 1.5cm;
-  margin-left: -97.5cm;
+  margin-left: -87.5cm;
 }
 .txt2 {
-  margin-top: -2.7cm;
-  margin-left: -82.5cm;
+  margin-top: -3.5cm;
+  margin-left: -73.5cm;
 }
 .page textarea {
   border: 1px solid lightblue;
   border-radius: 5px;
   font-size: 18px;
   padding-left: 15px;
-  height: 110px;
+  height: 130px;
+  width: 220px;
 }
 .page .txt3 {
-  margin-top: 2cm;
-  margin-left: -81cm;
+  margin-top: 2.15cm;
+  margin-left: -73.2cm;
 }
 .page .txt3 button {
   margin-right: 10px;
@@ -375,15 +449,17 @@
 //q8
 .q8 {
   margin-top: 1cm;
-  margin-left: -104.8cm;
+  margin-left: -92.8cm;
 }
 .page .fin {
-  margin-left: -104.8cm;
+  margin-left: -92.8cm;
   font-size: 24px;
 }
 .page .fin2 {
   font-size: 42px;
   font-weight: 600;
+ 
+
 }
 .page .fin3 {
   font-size: 18px;
@@ -393,7 +469,7 @@
 }
 .container .form-outer {
   width: 100%;
-  //overflow: hidden;
+  overflow: hidden;
 }
 .container .page {
   margin-left: 4cm;
