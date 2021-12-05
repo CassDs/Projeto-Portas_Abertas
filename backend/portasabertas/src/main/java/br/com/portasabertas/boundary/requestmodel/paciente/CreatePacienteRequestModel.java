@@ -1,4 +1,4 @@
-package br.com.portasabertas.boundary.requestmodel;
+package br.com.portasabertas.boundary.requestmodel.paciente;
 
 import com.sun.istack.NotNull;
 import lombok.Builder;

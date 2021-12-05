@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -37,6 +38,7 @@ public class Paciente {
     List<Agendamento> agendamentos;
     @OneToOne
     ResponsavelPaciente responsavelPaciente;
-    @OneToOne
-    EnderecoPaciente enderecoPaciente;
+    @ManyToMany(fetch = FetchType.EAGER)
+    List<Perfil> perfilList = new ArrayList<>();
+
 }

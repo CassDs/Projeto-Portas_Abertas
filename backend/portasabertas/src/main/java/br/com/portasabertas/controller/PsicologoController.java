@@ -1,6 +1,6 @@
 package br.com.portasabertas.controller;
 
-import br.com.portasabertas.boundary.requestmodel.CreatePsicologoRequestModel;
+import br.com.portasabertas.boundary.requestmodel.psicologo.CreatePsicologoRequestModel;
 import br.com.portasabertas.dto.PsicologoDTO;
 import br.com.portasabertas.model.Psicologo;
 import br.com.portasabertas.service.PsicologoService;

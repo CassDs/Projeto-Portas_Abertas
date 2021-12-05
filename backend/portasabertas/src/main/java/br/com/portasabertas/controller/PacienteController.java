@@ -1,6 +1,6 @@
 package br.com.portasabertas.controller;
 
-import br.com.portasabertas.boundary.requestmodel.CreatePacienteRequestModel;
+import br.com.portasabertas.boundary.requestmodel.paciente.CreatePacienteRequestModel;
 import br.com.portasabertas.dto.PacienteDTO;
 import br.com.portasabertas.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin("http://localhost:4200")
 @RequestMapping("/api/pacientes")
 public class PacienteController {
     @Autowired

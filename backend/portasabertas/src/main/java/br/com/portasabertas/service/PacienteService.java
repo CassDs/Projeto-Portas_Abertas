@@ -1,6 +1,6 @@
 package br.com.portasabertas.service;
 
-import br.com.portasabertas.boundary.requestmodel.CreatePacienteRequestModel;
+import br.com.portasabertas.boundary.requestmodel.paciente.CreatePacienteRequestModel;
 import br.com.portasabertas.dao.PacienteRepository;
 import br.com.portasabertas.dao.StatusPacienteRepository;
 import br.com.portasabertas.dto.PacienteDTO;
