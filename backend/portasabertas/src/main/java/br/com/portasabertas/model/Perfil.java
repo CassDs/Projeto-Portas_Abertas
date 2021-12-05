@@ -19,6 +19,4 @@ public class Perfil {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String descricao;
-    @OneToMany
-    List<Psicologo> psicologos;
 }

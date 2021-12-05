@@ -1,4 +1,4 @@
-package br.com.portasabertas.security.jwt;
+package br.com.portasabertas.config;
 
 import br.com.portasabertas.model.Psicologo;
 import io.jsonwebtoken.Claims;
@@ -6,13 +6,15 @@ import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.HashMap;
 
-public class JwtService {
+@Service
+public class TokenService {
     @Value("${security.jwt.expiracao}")
     private String expiracao;
 
@@ -23,13 +25,17 @@ public class JwtService {
         long expString = Long.parseLong(expiracao);
         LocalDateTime dataHoraExpiracao = LocalDateTime.now().plusMinutes(expString);
         Date date = Date.from(dataHoraExpiracao.atZone(ZoneId.systemDefault()).toInstant());
+/*
         HashMap<String, Object> claims = new HashMap<>();
-        claims.put("perfil", psicologo.getPerfil().getDescricao());
+*/
+/*        claims.put("perfil", psicologo.getPerfil().getDescricao());*/
         return Jwts
                 .builder()
                 .setSubject(psicologo.getCrp())
                 .setExpiration(date)
+/*
                 .setClaims(claims)
+*/
                 .signWith(SignatureAlgorithm.HS512, chaveAssinatura)
                 .compact();
     }
@@ -42,7 +48,7 @@ public class JwtService {
                 .getBody();
     }
 
-    public boolean tokenIsValid(String token) {
+    public boolean isValidToken(String token) {
         try {
             final var claims = getClaims(token);
             Date dataExpiracao = claims.getExpiration();
@@ -51,5 +57,10 @@ public class JwtService {
         } catch (Exception e) {
             return false;
         }
+    }
+
+    public Long getPscologoId(String token) {
+        Claims claims = Jwts.parser().setSigningKey(this.chaveAssinatura).parseClaimsJws(token).getBody();
+        return Long.parseLong(claims.getSubject());
     }
 }

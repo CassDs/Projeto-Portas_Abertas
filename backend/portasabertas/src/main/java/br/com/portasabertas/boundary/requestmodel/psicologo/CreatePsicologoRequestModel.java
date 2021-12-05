@@ -1,4 +1,4 @@
-package br.com.portasabertas.boundary.requestmodel;
+package br.com.portasabertas.boundary.requestmodel.psicologo;
 
 import lombok.Builder;
 import lombok.Data;
