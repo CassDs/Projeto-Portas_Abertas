@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { LOCALSTORAGE } from 'src/app/shared/constants';
+import { LOCAL_STORAGE } from 'src/app/constants';
 
 @Injectable({
   providedIn: 'root',
@@ -12,23 +12,23 @@ export class TokenService {
   }
 
   getToken(): string {
-    return window.localStorage.getItem(LOCALSTORAGE.TOKEN_KEY);
+    return window.localStorage.getItem(LOCAL_STORAGE.TOKEN_KEY);
   }
 
   getAuthorities(): Array<string> {
-    return JSON.parse(window.localStorage.getItem(LOCALSTORAGE.AUTHORITY_KEY));
+    return JSON.parse(window.localStorage.getItem(LOCAL_STORAGE.AUTHORITIES));
   }
 
   setToken(token: string): void {
-    window.localStorage.setItem(LOCALSTORAGE.TOKEN_KEY, token);
+    window.localStorage.setItem(LOCAL_STORAGE.TOKEN_KEY, token);
   }
 
   setAuthorities(authority: string): void {
-    window.localStorage.setItem(LOCALSTORAGE.AUTHORITY_KEY, authority);
+    window.localStorage.setItem(LOCAL_STORAGE.AUTHORITIES, authority);
   }
 
   removeToken(): void {
-    window.localStorage.removeItem(LOCALSTORAGE.TOKEN_KEY);
-    window.localStorage.removeItem(LOCALSTORAGE.AUTHORITY_KEY);
+    window.localStorage.removeItem(LOCAL_STORAGE.TOKEN_KEY);
+    window.localStorage.removeItem(LOCAL_STORAGE.AUTHORITIES);
   }
 }

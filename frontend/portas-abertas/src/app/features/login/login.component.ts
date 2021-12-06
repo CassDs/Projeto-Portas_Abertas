@@ -2,7 +2,9 @@ import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/core/auth/auth.service';
+import { UserService } from 'src/app/core/user/user.service';
 import { LoginRequestModel } from './login.model';
 
 @Component({
@@ -16,7 +18,9 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    private router: Router
+    private userService: UserService,
+    private router: Router,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -26,12 +30,11 @@ export class LoginComponent implements OnInit {
   login(): void {
     let login: LoginRequestModel = this.formLogin.getRawValue();
     this.authService.auth(login).subscribe(
-      (success) => {
-        console.log(success.token);
+      () => {
         this.router.navigate(['/superAdmin']);
       },
       (error) => {
-        console.log(error);
+        this.toastrService.error('Dados inválidos');
       }
     );
   }
