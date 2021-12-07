@@ -10,6 +10,7 @@ import { PacienteService } from '../paciente.service';
 })
 export class CadastroPacienteComponent implements OnInit {
   form: FormGroup;
+  
 
   constructor(
     private formbuilder: FormBuilder,
