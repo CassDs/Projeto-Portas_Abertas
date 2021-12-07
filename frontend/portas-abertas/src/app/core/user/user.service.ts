@@ -8,7 +8,7 @@ export class UserService {
   profile: number;
   constructor(private tokenService: TokenService) {}
 
-  registerUser(token: string, authorities: Array<any> = []): void {
+  registerUser(token: string): void {
     this.tokenService.setToken(token);
   }
 

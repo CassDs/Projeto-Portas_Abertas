@@ -8,8 +8,6 @@ import { UserService } from 'src/app/core/user/user.service';
   styleUrls: ['./super-admin.component.scss'],
 })
 export class SuperAdminComponent implements OnInit {
-  nome: string = 'Cassio';
-
   constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {}

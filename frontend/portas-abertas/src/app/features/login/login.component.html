@@ -13,7 +13,7 @@
       <li><a routerLink="">Início</a></li>
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#contato">Contato</a></li>
-      <li><a routerLink="/login">Parceiros</a></li>
+      <li><a routerLink="['/login']">Parceiros</a></li>
       <li><a class="active" routerLink="/cadastro-paciente">Cadastre-se</a></li>
     </ul>
   </nav>
@@ -24,7 +24,7 @@
     <div class="imgBx">
       <img src="../../../assets/img/imgLogin.jpg" />
     </div>
-    <div class="contentBx">
+    <div class="contentBx" (keyup.enter)="login()">
       <div class="formBx">
         <h2>Login</h2>
         <form>
