@@ -1,8 +1,10 @@
 import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/core/auth/auth.service';
+import { UserService } from 'src/app/core/user/user.service';
 import { LoginRequestModel } from './login.model';
 
 @Component({
@@ -16,30 +18,56 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    private router: Router
+    private userService: UserService,
+    private router: Router,
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
     this.startFormLogin();
+    this.rediretcToSuperAdminView();
   }
 
   login(): void {
-    let login: LoginRequestModel = this.formLogin.getRawValue();
-    this.authService.auth(login).subscribe(
-      (success) => {
-        console.log(success.token);
-        this.router.navigate(['/superAdmin']);
-      },
-      (error) => {
-        console.log(error);
+    let crp = this.formLogin.value.crp;
+    let senha = this.formLogin.value.senha;
+
+    if (this.formLogin.valid) {
+      let login: LoginRequestModel = this.formLogin.getRawValue();
+      this.authService.auth(login).subscribe(
+        () => {
+          this.router.navigate(['/superAdmin']);
+        },
+        (error) => {
+          this.toastrService.error('Dados inválidos');
+        }
+      );
+    } else {
+      if (!crp) {
+        this.setErrorOnFormControlWhenIsBlank('crp');
       }
-    );
+
+      if (!senha) {
+        this.setErrorOnFormControlWhenIsBlank('senha');
+      }
+    }
+  }
+
+  private setErrorOnFormControlWhenIsBlank(formControlName: string): void {
+    this.formLogin.get(formControlName).setErrors({ required: true });
+    this.formLogin.get(formControlName).markAsTouched();
   }
 
   private startFormLogin(): void {
     this.formLogin = this.formBuilder.group({
-      crp: this.formBuilder.control(''),
-      senha: this.formBuilder.control(''),
+      crp: this.formBuilder.control('', Validators.required),
+      senha: this.formBuilder.control('', Validators.required),
     });
+  }
+
+  private rediretcToSuperAdminView(): void {
+    if (this.userService.isLogged()) {
+      this.router.navigate(['superAdmin']);
+    }
   }
 }

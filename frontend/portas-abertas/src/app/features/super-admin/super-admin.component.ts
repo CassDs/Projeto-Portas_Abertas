@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/core/user/user.service';
 
 @Component({
   selector: 'app-super-admin',
@@ -9,13 +11,16 @@ export class SuperAdminComponent implements OnInit {
 
   Name: string = "Cássio"
 
-  constructor() {}
+  constructor(private userService: UserService, private router: Router) {}
 
-  
   ngOnInit(): void {
-    
-    
     this.exec();
+
+  }
+
+  logout(): void {
+    this.userService.logout();
+    this.router.navigate(['/login']);
   }
   
   //Mnnu Lateral

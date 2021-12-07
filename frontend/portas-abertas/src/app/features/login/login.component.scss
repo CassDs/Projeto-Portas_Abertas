@@ -77,7 +77,7 @@ nav {
   display: flex;
   background: #06446b;
 }
-section .imgBx:before {
+/* section .imgBx:before {
   content: "";
   position: absolute;
   top: 0;
@@ -86,15 +86,8 @@ section .imgBx:before {
   height: 100%;
   background: linear-gradient(225deg, #0000, #06446b);
   mix-blend-mode: screen;
-}
-section .imgBx img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  object-fit: cover;
-}
+} */
+
 section .contentBx {
   position: relative;
   margin-left: 25cm;
@@ -105,6 +98,10 @@ section .contentBx {
 }
 .formBx {
   width: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .formBx h2 {
   font-family: "Voltaire", sans-serif;
@@ -116,10 +113,11 @@ section .contentBx {
   display: inline-block;
   letter-spacing: 1px;
 }
-section .contentBx .formBx .inputBx {
+.inputBx {
   margin-bottom: 20px;
+  display: flex;
 }
-section .contentBx .formBx .inputBx span {
+form span {
   font-size: 16px;
   margin-bottom: 5px;
   display: inline-block;
@@ -128,7 +126,7 @@ section .contentBx .formBx .inputBx span {
   font-size: 16px;
   letter-spacing: 1px;
 }
-section .contentBx .formBx .inputBx input {
+.inputBx input {
   width: 100%;
   padding: 10px 20px;
   outline: none;
@@ -139,7 +137,7 @@ section .contentBx .formBx .inputBx input {
   background: transparent;
   border-radius: 30px;
 }
-section .contentBx .formBx .inputBx input[type="submit"] {
+.inputBx input[type="submit"] {
   background: #fff;
   color: #000080;
   outline: none;
@@ -148,16 +146,16 @@ section .contentBx .formBx .inputBx input[type="submit"] {
   font-weight: bold;
   cursor: pointer;
 }
-section .contentBx .formBx .inputBx input[type="submit"]:hover {
+.inputBx input[type="submit"]:hover {
   background: #87ceeb;
 }
-section .contentBx .formBx .remember {
+.remember {
   margin-bottom: 10px;
   color: #fff;
   font-weight: 400;
   font-size: 14px;
 }
-section .contentBx .formBx .inputBx p a {
+.inputBx p a {
   color: #fff;
 }
 
@@ -176,4 +174,18 @@ section .contentBx .formBx .inputBx p a {
 
 .btnEntrar:hover {
   background: #87ceeb;
+}
+
+.area-login {
+  background: #06446b;
+}
+
+.area-img img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+h2 {
+  color: #fff;
 }

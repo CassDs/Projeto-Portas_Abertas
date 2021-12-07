@@ -34,11 +34,11 @@ public class Psicologo implements UserDetails {
     @OneToMany
     List<Agendamento> agendamentos;
     @ManyToMany
-    List<Perfil> perfis = new ArrayList<>();
+    List<Perfil> perfis;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return Collections.arrayToList(this.perfis);
+        return null;
     }
 
     @Override

@@ -15,7 +15,7 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "paciente")
+@Table(name = "paciente", uniqueConstraints={@UniqueConstraint(columnNames={"email"})})
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -30,6 +30,7 @@ public class Paciente {
     String profissao;
     String conhecimento;
     String telefone;
+    String email;
     @ManyToOne
     StatusPaciente statusPaciente;
     @ManyToOne

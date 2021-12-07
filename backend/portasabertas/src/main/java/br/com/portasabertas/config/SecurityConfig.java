@@ -36,10 +36,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements WebM
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeRequests()
-                .antMatchers("/api/psicologos/**")
-                .permitAll()
                 .antMatchers("/auth").permitAll()
-                .antMatchers("/api/pacientes").permitAll()
+                .antMatchers(HttpMethod.POST, "/api/pacientes").permitAll()
                 .anyRequest().authenticated()
                 .and().csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
