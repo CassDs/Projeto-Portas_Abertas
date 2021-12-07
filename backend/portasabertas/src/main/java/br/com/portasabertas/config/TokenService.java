@@ -1,17 +1,19 @@
 package br.com.portasabertas.config;
 
+import br.com.portasabertas.dao.PsicologoRepository;
 import br.com.portasabertas.model.Psicologo;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
-import java.util.HashMap;
 
 @Service
 public class TokenService {
@@ -21,9 +23,15 @@ public class TokenService {
     @Value("${security.jwt.chave-assinatura}")
     private String chaveAssinatura;
 
-    public String gerarToken(Psicologo psicologo) {
+    @Autowired
+    private PsicologoRepository psicologoRepository;
+
+    public String gerarToken(Psicologo psi) {
         long expString = Long.parseLong(expiracao);
         LocalDateTime dataHoraExpiracao = LocalDateTime.now().plusMinutes(expString);
+        final var psicologo = psicologoRepository.findByCrp(psi.getCrp()).orElseThrow(
+                () -> new UsernameNotFoundException("Usuário não encontrado")
+        );
         Date date = Date.from(dataHoraExpiracao.atZone(ZoneId.systemDefault()).toInstant());
 /*
         HashMap<String, Object> claims = new HashMap<>();
@@ -31,7 +39,7 @@ public class TokenService {
 /*        claims.put("perfil", psicologo.getPerfil().getDescricao());*/
         return Jwts
                 .builder()
-                .setSubject(psicologo.getCrp())
+                .setSubject(psicologo.getId().toString())
                 .setExpiration(date)
 /*
                 .setClaims(claims)
