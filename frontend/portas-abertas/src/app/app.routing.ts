@@ -12,7 +12,7 @@ const APP_ROUTES: Routes = [
     path: 'superAdmin',
     component: SuperAdminComponent,
     pathMatch: 'full',
-    canActivate: [AuthGuard],
+    //canActivate: [AuthGuard],
   },
   {
     path: 'cadastro-paciente',
