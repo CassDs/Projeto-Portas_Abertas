@@ -1,4 +1,4 @@
-<div class="home" id="home">
+<div class="home d-flex flex-column" id="home">
   <div class="homeText" id="homeText">Sua Agenda da Semana</div>
   <div class="fundo">
     <table class="table table-striped table-hover" style="width: 100%">
@@ -8,14 +8,16 @@
           <th>Telefone</th>
           <th>Dia</th>
           <th>Hora</th>
+          <th>Data</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let agenda of agendaList">
-          <td>{{ agenda.nome }}</td>
-          <td>{{ agenda.telefone }}</td>
-          <td></td>
-          <td></td>
+          <td>{{ agenda?.nome }}</td>
+          <td>{{ agenda?.telefone | mask: "(00) 0 0000-0000" }}</td>
+          <td>{{ extractWeekDay(agenda?.dataHora) }}</td>
+          <td>{{ extractHour(agenda?.dataHora) }}</td>
+          <td>{{ agenda?.dataHora | date: "dd/MM/yyyy" }}</td>
         </tr>
       </tbody>
     </table>

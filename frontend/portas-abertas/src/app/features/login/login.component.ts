@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { LOCAL_STORAGE } from 'src/app/constants';
 import { AuthService } from 'src/app/core/auth/auth.service';
 import { UserService } from 'src/app/core/user/user.service';
 import { LoginRequestModel } from './login.model';
@@ -37,6 +38,12 @@ export class LoginComponent implements OnInit {
       this.authService.auth(login).subscribe(
         () => {
           this.router.navigate(['/superAdmin']);
+          let userId = window.localStorage.getItem(LOCAL_STORAGE.USER_ID);
+          this.userService
+            .getUserById(Number(userId))
+            .subscribe((user) =>
+              window.localStorage.setItem(LOCAL_STORAGE.USER_NAME, user?.nome)
+            );
         },
         (error) => {
           this.toastrService.error('Dados inválidos');

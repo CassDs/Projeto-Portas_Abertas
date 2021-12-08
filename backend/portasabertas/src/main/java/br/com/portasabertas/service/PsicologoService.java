@@ -4,8 +4,10 @@ import br.com.portasabertas.boundary.requestmodel.psicologo.CreatePsicologoReque
 import br.com.portasabertas.dao.PerfilRepository;
 import br.com.portasabertas.dao.PsicologoRepository;
 import br.com.portasabertas.dto.PsicologoDTO;
+import br.com.portasabertas.exception.NegocioException;
 import br.com.portasabertas.model.Psicologo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -41,6 +43,14 @@ public class PsicologoService {
     public List<PsicologoDTO> getAll() {
         final var psicologos = psicologoRepository.findAll();
         return PsicologoDTO.convertToPsicologoDTOList(psicologos);
+    }
+
+    public PsicologoDTO getPsicologoById(Long id) {
+        final var psicologo = psicologoRepository.findById(id)
+                .orElseThrow(() -> new UsernameNotFoundException("Usuário não encontrado"));
+        return PsicologoDTO.builder()
+                .nome(psicologo.getNome())
+                .build();
     }
 
 

@@ -53,11 +53,8 @@ public class AgendamentoService {
         }
     }
 
-    public List<PacienteExibicaoAgendamentoPsicologoDTO> getAgendamentos(
-            Long psicologoId,
-            LocalDateTime dateTime
-    ) {
-        final var agendamentos =  agendamentoDAO.findAll(psicologoId, dateTime);
+    public List<PacienteExibicaoAgendamentoPsicologoDTO> getAgendamentos(Long psicologoId) {
+        final var agendamentos =  agendamentoDAO.findAll(psicologoId);
         return PacienteExibicaoAgendamentoPsicologoDTO.convertToPacienteAgendamentoDTOList(agendamentos);
     }
 }

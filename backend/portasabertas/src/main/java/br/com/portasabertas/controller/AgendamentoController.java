@@ -25,10 +25,8 @@ public class AgendamentoController {
 
     @GetMapping("/filter")
     public List<PacienteExibicaoAgendamentoPsicologoDTO> getAll(
-            @RequestParam(value = "psicologoId", required = true) final Long psicologoId,
-            @RequestParam(value = "dateTime", required = true)  @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
-            final LocalDateTime dateTime) {
-        return agendamentoService.getAgendamentos(psicologoId, dateTime);
+            @RequestParam(value = "psicologoId", required = true) final Long psicologoId) {
+        return agendamentoService.getAgendamentos(psicologoId);
     }
 
 }

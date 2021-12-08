@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
+import java.util.HashMap;
 
 @Service
 public class TokenService {
@@ -33,10 +34,10 @@ public class TokenService {
                 () -> new UsernameNotFoundException("Usuário não encontrado")
         );
         Date date = Date.from(dataHoraExpiracao.atZone(ZoneId.systemDefault()).toInstant());
-/*
-        HashMap<String, Object> claims = new HashMap<>();
-*/
-/*        claims.put("perfil", psicologo.getPerfil().getDescricao());*/
+
+        /*HashMap<String, Object> claims = new HashMap<>();
+
+        claims.put("nome", psicologo.getNome());*/
         return Jwts
                 .builder()
                 .setSubject(psicologo.getId().toString())

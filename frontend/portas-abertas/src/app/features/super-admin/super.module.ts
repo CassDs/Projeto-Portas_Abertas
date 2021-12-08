@@ -5,6 +5,8 @@ import { AgendaComponent } from './agenda/agenda.component';
 import { RouterModule } from '@angular/router';
 import { SuperAdminComponent } from './super-admin.component';
 import { MarcarAgendamentoComponent } from './marcar-agendamento/marcar-agendamento.component';
+import { IConfig, NgxMaskModule } from 'ngx-mask';
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
@@ -12,6 +14,11 @@ import { MarcarAgendamentoComponent } from './marcar-agendamento/marcar-agendame
     AgendaComponent,
     MarcarAgendamentoComponent,
   ],
-  imports: [CommonModule, SuperRoutingModule, RouterModule],
+  imports: [
+    CommonModule,
+    SuperRoutingModule,
+    RouterModule,
+    NgxMaskModule.forRoot(),
+  ],
 })
 export class SuperModule {}

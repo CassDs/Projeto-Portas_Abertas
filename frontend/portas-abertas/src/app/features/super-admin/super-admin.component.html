@@ -1,102 +1,100 @@
-<body>
-  <div class="container">
-    <div class="navigation" id="navigation">
-      <ul>
-        <li>
-          <a class="logo" href="#">
-            <span class="icon">
-              <img
-                src="./../../../assets/img/logoPortas.png"
-                alt="mini-Logo"
-                width="50"
-                height="80"
-              />
-            </span>
-            <span class="title p">Portas Abertas</span>
-          </a>
-        </li>
-        <li (click)="redirectToAgenda()">
-          <a id="inicio">
-            <span class="icon"><i class="fa fa-home"></i></span>
-            <span class="title">Início</span>
-          </a>
-        </li>
-        <li (click)="redirectToAgendamento()">
-          <a>
-            <span class="icon"><i class="far fa-calendar-check"></i></span>
-            <span class="title">Agendar</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="icon"><i class="far fa-calendar-times"></i></span>
-            <span class="title">Desmarcar</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="icon"><i class="fas fa-desktop"></i></span>
-            <span class="title">Status</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="icon"><i class="fas fa-database"></i></span>
-            <span class="title">Banco de Dados</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="icon"><i class="fas fa-users-cog"></i></span>
-            <span class="title">Admin</span>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <span class="icon"><i class="fas fa-cogs"></i></span>
-            <span class="title">Configurações</span>
-          </a>
-        </li>
-        <li (click)="logout()">
-          <a>
-            <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
-            <span class="title">Sair</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+<div class="container">
+  <div class="navigation" id="navigation">
+    <ul>
+      <li>
+        <a class="logo" href="#">
+          <span class="icon">
+            <img
+              src="./../../../assets/img/logoPortas.png"
+              alt="mini-Logo"
+              width="50"
+              height="80"
+            />
+          </span>
+          <span class="title p">Portas Abertas</span>
+        </a>
+      </li>
+      <li (click)="redirectToAgenda()">
+        <a id="inicio">
+          <span class="icon"><i class="fa fa-home"></i></span>
+          <span class="title">Início</span>
+        </a>
+      </li>
+      <li (click)="redirectToAgendamento()">
+        <a>
+          <span class="icon"><i class="far fa-calendar-check"></i></span>
+          <span class="title">Agendar</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="far fa-calendar-times"></i></span>
+          <span class="title">Desmarcar</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-desktop"></i></span>
+          <span class="title">Status</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-database"></i></span>
+          <span class="title">Banco de Dados</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-users-cog"></i></span>
+          <span class="title">Admin</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <span class="icon"><i class="fas fa-cogs"></i></span>
+          <span class="title">Configurações</span>
+        </a>
+      </li>
+      <li (click)="logout()">
+        <a>
+          <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+          <span class="title">Sair</span>
+        </a>
+      </li>
+    </ul>
+  </div>
 
-    <!--Menu Top-->
-    <div class="main" id="main">
-      <div class="topbar">
-        <div class="toggle" id="toggle">
-          <i class="fas fa-bars"></i>
-        </div>
-        <!--User-->
-        <div class="user">
-          <img
-            src="../../../assets/img/Gessica.jpeg"
-            width="64px"
-            height="64px"
-          />
-        </div>
+  <!--Menu Top-->
+  <div class="main" id="main">
+    <div class="topbar">
+      <div class="toggle" id="toggle">
+        <i class="fas fa-bars"></i>
       </div>
-    </div>
-    <!--Painel top-->
-    <div class="painelTop">
-      <div class="cardBox">
-        <div class="cardName" id="cardName">
-          <div>
-            <div class="nameUser">Seja Bem Vindo {{ Name }}</div>
-          </div>
-        </div>
+      <!--User-->
+      <div class="user">
+        <img
+          src="../../../assets/img/Gessica.jpeg"
+          width="64px"
+          height="64px"
+        />
       </div>
-    </div>
-
-    <!--Painel Central-->
-    <div class="painelCentral" id="painelCentral">
-      <!--Painel Home-->
-      <router-outlet></router-outlet>
     </div>
   </div>
-</body>
+  <!--Painel top-->
+  <div class="painelTop">
+    <div class="cardBox">
+      <div class="cardName" id="cardName">
+        <div>
+          <div class="nameUser">Seja bem-vindo, {{ getUserName() }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Painel Central-->
+  <div class="painelCentral" id="painelCentral">
+    <!--Painel Home-->
+    <router-outlet></router-outlet>
+  </div>
+</div>

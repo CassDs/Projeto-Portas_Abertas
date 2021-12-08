@@ -30,6 +30,11 @@ export class SuperAdminComponent {
   redirectToAgenda(): void {
     this.router.navigate(['/superAdmin/agenda']);
   }
+
+  getUserName(): string {
+    return this.userService.getUserName();
+  }
+
   //Mnnu Lateral
   exec() {
     let list = document.querySelectorAll('.navigation li');

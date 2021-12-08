@@ -13,6 +13,11 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
 import { TokenInterceptor } from './core/interceptors/token.interceptor';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { LoadingInterceptor } from './core/interceptors/loading.interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
@@ -23,6 +28,7 @@ import { TokenInterceptor } from './core/interceptors/token.interceptor';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     NgbModule,
     FormsModule,
@@ -31,11 +37,17 @@ import { TokenInterceptor } from './core/interceptors/token.interceptor';
     HttpClientModule,
     NgxSpinnerModule,
     ToastrModule.forRoot(),
+    NgxMaskModule.forRoot(),
   ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
+      multi: true,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: LoadingInterceptor,
       multi: true,
     },
   ],

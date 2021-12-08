@@ -13,9 +13,8 @@ export class SuperService {
 
   getAgenda(): Observable<Array<Agenda>> {
     const psicologoId: number = 2;
-    const dateTime: string = '2021-12-07T12:00';
     return this.httpClient.get<Array<Agenda>>(
-      `${baseUrl}/api/agendamentos/filter?psicologoId=${psicologoId}&dateTime=${dateTime}`
+      `${baseUrl}/api/agendamentos/filter?psicologoId=${psicologoId}`
     );
   }
 }

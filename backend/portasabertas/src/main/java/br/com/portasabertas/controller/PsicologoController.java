@@ -30,4 +30,9 @@ public class PsicologoController {
         return ResponseEntity.ok(psicologos);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<PsicologoDTO> getPsicologo(@PathVariable Long id) {
+        return ResponseEntity.ok(psicologoService.getPsicologoById(id));
+    }
+
 }
