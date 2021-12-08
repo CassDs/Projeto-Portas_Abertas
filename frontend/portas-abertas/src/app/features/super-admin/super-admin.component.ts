@@ -11,9 +11,19 @@ export class SuperAdminComponent implements OnInit {
 
   Name: string = "Cássio"
 
+  //public dados = [{name: 'Cassio', tel: '819999999', dia: 'Segunda', horario: '8:00'}];
+  //dtOptions: DataTables.Settings = {};
+
+
   constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
+    /*this.dtOptions = {
+      pagingType: 'full_numbers',
+      pageLength: 5,
+      lengthMenu : [5, 10, 15],
+      processing: true
+    }*/
     this.exec();
 
   }
@@ -40,12 +50,18 @@ export class SuperAdminComponent implements OnInit {
     let navigation = document.getElementById('navigation');
     let main = document.getElementById('main');
     let cardName = document.getElementById('cardName');
+    let painel = document.getElementById('painelCentral');
+    let homeText = document.getElementById('homeText');
 
     toggle.onclick = function(){
-      navigation.classList.toggle('active')
-      main.classList.toggle('active')
-      cardName.classList.toggle('active')
-
+      navigation.classList.toggle('active');
+      main.classList.toggle('active');
+      cardName.classList.toggle('active');
+      painel.classList.toggle('active');
+      homeText.classList.toggle('active');
     }
+
+    
+    
   }
 }
