@@ -194,6 +194,7 @@ body {
   left: -220px; 
 }
 .nameUser{
+  position: relative;
   font-size: 24px;
   font-family: "Voltaire", sans-serif;
   color: #fff;
@@ -221,4 +222,13 @@ body {
 }
 .homeText.active{
   left: 460px;
+}
+.fundo{
+  position: relative;
+  background: #fff;
+  left: 40px;
+  top: 60px;
+  width: 920px;
+  height: 400px;
+  border-radius: 5px;
 }
