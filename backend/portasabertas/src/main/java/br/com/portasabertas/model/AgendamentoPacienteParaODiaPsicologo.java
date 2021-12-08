@@ -5,17 +5,14 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import java.time.LocalDateTime;
 
-@Entity
 @Builder
 @Data
-@Table(name = "perfil")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Perfil {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    String descricao;
+public class AgendamentoPacienteParaODiaPsicologo {
+    private LocalDateTime dataHora;
+    private String pacienteNome;
+    private String pacienteTelefone;
 }

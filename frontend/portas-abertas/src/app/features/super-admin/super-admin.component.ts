@@ -8,32 +8,35 @@ import { UserService } from 'src/app/core/user/user.service';
   styleUrls: ['./super-admin.component.scss'],
 })
 export class SuperAdminComponent implements OnInit {
-
-  Name: string = "Cássio"
+  Name: string = 'Cássio';
 
   constructor(private userService: UserService, private router: Router) {}
-  
 
   ngOnInit(): void {
+    this.router.navigate(['/superAdmin/agenda'])
     this.exec();
   }
-
 
   logout(): void {
     this.userService.logout();
     this.router.navigate(['/login']);
   }
-  
+
+  redirectToAgendamento(): void {
+    this.router.navigate(['/superAdmin/marcar-agendamento']);
+  }
+
+  redirectToAgenda(): void {
+    this.router.navigate(['/superAdmin/agenda']);
+  }
   //Mnnu Lateral
-  exec(){
+  exec() {
     let list = document.querySelectorAll('.navigation li');
-    function activeLink(){
-      list.forEach((item) =>
-      item.classList.remove('hovered'));
+    function activeLink() {
+      list.forEach((item) => item.classList.remove('hovered'));
       this.classList.add('hovered');
-    };
-    list.forEach((item)=>
-    item.addEventListener('mouseover',activeLink));
+    }
+    list.forEach((item) => item.addEventListener('mouseover', activeLink));
 
     //Encolher menu lateral
 
@@ -44,15 +47,12 @@ export class SuperAdminComponent implements OnInit {
     let painel = document.getElementById('painelCentral');
     let homeText = document.getElementById('homeText');
 
-    toggle.onclick = function(){
+    toggle.onclick = function () {
       navigation.classList.toggle('active');
       main.classList.toggle('active');
       cardName.classList.toggle('active');
       painel.classList.toggle('active');
       homeText.classList.toggle('active');
-    }
-
-    
-    
+    };
   }
 }

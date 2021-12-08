@@ -32,7 +32,6 @@ public class CreatePacienteRequestModel {
     String email;
     @NotNull @NotBlank(message = "Informe o telefone")
     String telefone;
-    @NotNull @NotBlank(message = "Informe outro telefone")
     String outroTelefone;
     @NotNull @NotBlank(message = "Informe a profissão")
     String profissao;
