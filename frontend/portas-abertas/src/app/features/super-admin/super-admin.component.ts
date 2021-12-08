@@ -1,25 +1,21 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/core/user/user.service';
-declare const $;
 
 @Component({
   selector: 'app-super-admin',
   templateUrl: './super-admin.component.html',
   styleUrls: ['./super-admin.component.scss'],
 })
-export class SuperAdminComponent {
+export class SuperAdminComponent implements OnInit {
 
   Name: string = "Cássio"
 
   constructor(private userService: UserService, private router: Router) {}
-  ngAfterViewInit(): void {
-
-  }
+  
 
   ngOnInit(): void {
     this.exec();
-    $('example').DataTable();
   }
 
 

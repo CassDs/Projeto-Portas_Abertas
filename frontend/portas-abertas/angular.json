@@ -24,10 +24,8 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss", "node_modules/ngx-toastr/toastr.css",
-                      "node_modules/datatables.net-dt/css/jquery.dataTables.css"],
-            "scripts": ["node_modules/jquery/dist/jquery.js",
-                        "node_modulea/datatable.net/js/jquery.dataTables.js"]
+            "styles": ["src/styles.scss", "node_modules/ngx-toastr/toastr.css"],
+            "scripts": []
           },
           "configurations": {
             "production": {
