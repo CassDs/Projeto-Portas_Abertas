@@ -9,10 +9,10 @@ import { AppRoutingModule } from './app.routing';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
-import { HttpClientModule } from '@angular/common/http';
-import { SuperAdminComponent } from './features/super-admin/super-admin.component';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { ToastrModule } from 'ngx-toastr';
+import { TokenInterceptor } from './core/interceptors/token.interceptor';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,6 @@ import { ToastrModule } from 'ngx-toastr';
     HomeComponent,
     LoginComponent,
     CadastroPacienteComponent,
-    SuperAdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +32,13 @@ import { ToastrModule } from 'ngx-toastr';
     NgxSpinnerModule,
     ToastrModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
