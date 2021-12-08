@@ -1,11 +1,33 @@
+.painelCentral {
+  position: fixed;
+  width: 1000px;
+  height: 556px;
+  background: #06446b;
+  left: 335px;
+  border-radius: 5px;
+  transition: 0.6s;
+}
+.painelCentral.active {
+  width: 1236px;
+  left: 105px;
+}
 .homeText {
   position: relative;
   left: 350px;
+  top: 30px;
   font-size: 36px;
   font-family: "Voltaire", sans-serif;
-  color: #06446b;
+  color: #fff;
 }
-
-.home {
-  width: 100%;
+.homeText.active {
+  left: 460px;
+}
+.fundo {
+  position: relative;
+  background: #fff;
+  left: 40px;
+  top: 60px;
+  width: 920px;
+  height: 400px;
+  border-radius: 5px;
 }
