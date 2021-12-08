@@ -20,6 +20,9 @@ public class PacienteController {
         return ResponseEntity.ok(pacienteService.getAllPacientes());
     }
 
+/*    @GetMapping
+    public ResponseEntity<List>*/
+
     @PostMapping
     public ResponseEntity<String> createPaciente(
             @RequestBody CreatePacienteRequestModel requestModel) {
