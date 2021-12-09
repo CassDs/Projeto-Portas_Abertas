@@ -13,7 +13,7 @@ export class SuperAdminComponent implements OnInit {
   constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
-    this.router.navigate(['/superAdmin/agenda'])
+    this.router.navigate(['/superAdmin/agenda']);
     this.exec();
   }
 
@@ -51,6 +51,7 @@ export class SuperAdminComponent implements OnInit {
     let cardName = document.getElementById('cardName');
     let homeText = document.getElementById('homeText');
     let painel = document.getElementById('painelCentral')
+    let painelM = document.getElementById('painelCentralM')
     let tableAgenda = document.getElementById('table-agenda')
 
     toggle.onclick = function () {
@@ -59,7 +60,8 @@ export class SuperAdminComponent implements OnInit {
       cardName.classList.toggle('active');
       homeText.classList.toggle('active');
       painel.classList.toggle('active');
-      tableAgenda.classList.toggle('active')
+      tableAgenda.classList.toggle('active');
+      painelM.classList.toggle('active');
     };
   }
 }

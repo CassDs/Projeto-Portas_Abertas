@@ -9,7 +9,7 @@ import { AuthGuard } from './core/auth/auth.guard';
 const APP_ROUTES: Routes = [
   {
     path: 'superAdmin',
-    //canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     loadChildren: () =>
       import('./features/super-admin/super.module').then((m) => m.SuperModule),
   },
