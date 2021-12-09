@@ -8,7 +8,7 @@ const COMPONENTS = [HeaderComponent, InputTextComponent];
 
 @NgModule({
   declarations: [...COMPONENTS],
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule, FormsModule],
   exports: [...COMPONENTS],
 })
 export class SharedModule {}

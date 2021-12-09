@@ -16,10 +16,11 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Agendamento {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
-    LocalDateTime data;
+    private Long id;
+    private LocalDateTime data;
+    boolean active;
     @ManyToOne
-    Paciente paciente;
+    private Paciente paciente;
     @ManyToOne
-    Psicologo psicologo;
+    private Psicologo psicologo;
 }

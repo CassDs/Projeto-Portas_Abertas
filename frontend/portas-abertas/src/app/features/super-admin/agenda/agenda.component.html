@@ -1,23 +1,34 @@
 <div class="home d-flex flex-column" id="home">
   <div class="homeText" id="homeText">Sua Agenda da Semana</div>
   <div class="fundo">
-    <table class="table table-striped table-hover" style="width: 100%">
+    <table
+      class="table table-bordered table-striped table-hover"
+      style="width: 100%"
+    >
       <thead>
         <tr>
           <th>Nome</th>
           <th>Telefone</th>
-          <th>Dia</th>
-          <th>Hora</th>
-          <th>Data</th>
+          <th class="text-center">Dia</th>
+          <th class="text-center">Hora</th>
+          <th class="text-center">Data</th>
+          <th class="text-center">Desmarcar</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let agenda of agendaList">
           <td>{{ agenda?.nome }}</td>
           <td>{{ agenda?.telefone | mask: "(00) 0 0000-0000" }}</td>
-          <td>{{ extractWeekDay(agenda?.dataHora) }}</td>
-          <td>{{ extractHour(agenda?.dataHora) }}</td>
-          <td>{{ agenda?.dataHora | date: "dd/MM/yyyy" }}</td>
+          <td class="text-center">{{ extractWeekDay(agenda?.dataHora) }}</td>
+          <td class="text-center">{{ extractHour(agenda?.dataHora) }}</td>
+          <td class="text-center">
+            {{ agenda?.dataHora | date: "dd/MM/yyyy" }}
+          </td>
+          <td class="text-center">
+            <span (click)="desmarcarAgendamento(agenda?.id)">
+              <i class="far fa-calendar-times"></i>
+            </span>
+          </td>
         </tr>
       </tbody>
     </table>

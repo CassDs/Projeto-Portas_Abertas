@@ -20,8 +20,12 @@ public class PacienteController {
         return ResponseEntity.ok(pacienteService.getAllPacientes());
     }
 
-/*    @GetMapping
-    public ResponseEntity<List>*/
+    @GetMapping("/filter")
+    public ResponseEntity<List<PacienteDTO>> getAllPacientesAtivosParaPsicologo(
+            @RequestParam(value = "psicologoId") Long psicologoId) {
+        final var pacientes = pacienteService.getAllPacientesAtivosParaPsicologo(psicologoId);
+        return ResponseEntity.ok(pacientes);
+    }
 
     @PostMapping
     public ResponseEntity<String> createPaciente(

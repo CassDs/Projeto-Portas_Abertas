@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { toJSDate } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-calendar';
+import { ToastrService } from 'ngx-toastr';
 import { UserService } from 'src/app/core/user/user.service';
 import { UtilsService } from 'src/app/shared/utils/utils.service';
 import { SuperService } from '../super.service';
@@ -15,7 +17,7 @@ export class AgendaComponent implements OnInit {
   constructor(
     private superService: SuperService,
     private utilsService: UtilsService,
-    private userService: UserService
+    private toastrService: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -26,6 +28,20 @@ export class AgendaComponent implements OnInit {
     this.superService
       .getAgenda()
       .subscribe((agenda) => (this.agendaList = agenda));
+  }
+
+  desmarcarAgendamento(id: number) {
+    if (window.confirm('Tem certeza que deseja desmarcar?')) {
+      this.superService.desmarcarAgendamento(id).subscribe(
+        (result) => {
+          this.toastrService.success(result);
+          this.loadAgenda();
+        },
+        (error) => {
+          this.toastrService.error('Erro ao desmarcar agendamento');
+        }
+      );
+    }
   }
 
   extractWeekDay(date: Date): string {

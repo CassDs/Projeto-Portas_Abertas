@@ -1,0 +1,46 @@
+i {
+  background-color: transparent;
+  color: white;
+  font-size: 150%;
+  width: 100%;
+  text-align: center;
+}
+
+.input-invalido {
+  border-style: solid;
+  border-width: 0.001cm;
+  border-color: red !important;
+}
+
+.div-msg-erro {
+  color: red;
+  font-size: 0.3cm;
+}
+
+.input-sugestao {
+  width: 100%;
+  margin-top: -1%;
+  margin-left: 0%;
+  z-index: 2;
+  margin-bottom: 2%;
+  position: absolute;
+  color: black;
+}
+
+.corpo-input {
+  z-index: 2;
+}
+
+ul {
+  height: 200px;
+  overflow-y: auto;
+}
+
+li {
+  background-color: rgb(250, 247, 247);
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #fff;
+}

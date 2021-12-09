@@ -41,6 +41,10 @@ export class UserService {
     return window.localStorage.getItem(LOCAL_STORAGE.USER_NAME);
   }
 
+  getUserId(): number {
+    return Number(window.localStorage.getItem(LOCAL_STORAGE.USER_ID));
+  }
+
   private decodeAndNotify(): void {
     const token = this.tokenService.getToken();
     const user = jwt_decode(token) as UserToken;

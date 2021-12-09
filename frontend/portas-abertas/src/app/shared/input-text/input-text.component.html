@@ -1,7 +1,32 @@
-<input
-  class="form-control"
-  [formControl]="control"
-  [placeholder]="placeholder"
-  [type]="type"
-  (keyup)="emit($event.target.value)"
-/>
+<div
+  class="input-group mb-3"
+  style="height: 50px"
+  tabindex="1"
+  (focusout)="focusoutDisplaySugestao()"
+>
+  <input
+    style="height: 50px"
+    class="form-control"
+    iconeFa="fa-search"
+    [(value)]="valor"
+    [formControl]="formControl"
+    [placeholder]="placeholder"
+    [class.input-invalido]="isInvalido()"
+    [type]="type"
+    (keyup)="filterValue($event.target.value)"
+    (click)="changeDisplaySugestao()"
+  />
+</div>
+<ng-container *ngIf="displaySugestao">
+  <div class="input-sugestao">
+    <ul class="list-group list-group-flush">
+      <li
+        class="list-group-item list-group-item-action"
+        *ngFor="let sugestao of filteredListaSugestoes"
+        (mousedown)="selectValue(sugestao)"
+      >
+        {{ sugestao?.nome }}
+      </li>
+    </ul>
+  </div>
+</ng-container>

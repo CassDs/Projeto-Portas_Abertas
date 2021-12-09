@@ -6,6 +6,8 @@ import { RouterModule } from '@angular/router';
 import { SuperAdminComponent } from './super-admin.component';
 import { MarcarAgendamentoComponent } from './marcar-agendamento/marcar-agendamento.component';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
+import { SharedModule } from 'src/app/shared/shared.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
@@ -16,9 +18,12 @@ export const options: Partial<IConfig> | (() => Partial<IConfig>) = null;
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
     SuperRoutingModule,
     RouterModule,
     NgxMaskModule.forRoot(),
+    SharedModule,
   ],
 })
 export class SuperModule {}

@@ -6,6 +6,7 @@ import br.com.portasabertas.service.AgendamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDateTime;
@@ -27,6 +28,12 @@ public class AgendamentoController {
     public List<PacienteExibicaoAgendamentoPsicologoDTO> getAll(
             @RequestParam(value = "psicologoId", required = true) final Long psicologoId) {
         return agendamentoService.getAgendamentos(psicologoId);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> desmarcarAgendamento(@PathVariable Long id) {
+        agendamentoService.desmarcarAgendamento(id);
+        return ResponseEntity.ok("Agendamento desmarcado com sucesso");
     }
 
 }

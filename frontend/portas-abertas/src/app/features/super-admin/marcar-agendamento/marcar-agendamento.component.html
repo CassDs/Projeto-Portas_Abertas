@@ -1,1 +1,57 @@
-<p>marcar-agendamento works!</p>
+<div class="row cont">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="col-12 d-flex justify-content-center mt-3">
+          <span>Agendar consulta</span>
+        </div>
+
+        <div class="col-12 d-flex flex-column align-items-center mt-5">
+          <div class="col-6">
+            <span>Paciente:</span>
+
+            <app-input-text
+              [listaSugestoes]="pacientes"
+              [formControl]="formMarcar?.controls['paciente']"
+              placeholder="Insira o nome do paciente"
+              (mudarValor)="onSelectPaciente($event)"
+            ></app-input-text>
+          </div>
+
+          <div class="col-6 mt-5">
+            <label>Data e hora:</label>
+            <input
+              class="form-control"
+              type="datetime-local"
+              [formControl]="formMarcar?.controls['data']"
+            />
+          </div>
+
+          <div class="col-4 d-flex justify-content-center mt-5">
+            <div class="col-4">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                (click)="formMarcar.reset()"
+              >
+                Limpar
+              </button>
+            </div>
+
+            <div class="col-4">
+              <button
+                type="button"
+                class="btn btn-primary"
+                [class.disabled]="formMarcar.invalid"
+                [disabled]="formMarcar.invalid"
+                (click)="marcarAgendamento()"
+              >
+                Marcar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

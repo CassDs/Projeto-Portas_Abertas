@@ -1,6 +1,7 @@
 package br.com.portasabertas.service;
 
 import br.com.portasabertas.boundary.requestmodel.paciente.CreatePacienteRequestModel;
+import br.com.portasabertas.dao.PacienteDAO;
 import br.com.portasabertas.dao.PacienteRepository;
 import br.com.portasabertas.dao.StatusPacienteRepository;
 import br.com.portasabertas.dto.PacienteDTO;
@@ -25,7 +26,8 @@ public class PacienteService {
     private PacienteRepository pacienteRepository;
     @Autowired
     private StatusPacienteRepository statusPacienteRepository;
-
+    @Autowired
+    private PacienteDAO pacienteDAO;
 
     public List<PacienteDTO> getAllPacientes() {
         final var pacientes = this.pacienteRepository.findAll();
@@ -60,6 +62,11 @@ public class PacienteService {
         } else {
             throw new NegocioException((violations.stream().findFirst().get().getMessage()));
         }
+    }
+
+    public List<PacienteDTO> getAllPacientesAtivosParaPsicologo(Long psicologoId) {
+        final var pacientes = pacienteDAO.findAllPacientesAtivosParaOPsicologo(psicologoId);
+        return PacienteDTO.convertToPacienteDTOList(pacientes);
     }
 
 }

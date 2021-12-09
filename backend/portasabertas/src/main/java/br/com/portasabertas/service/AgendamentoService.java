@@ -8,6 +8,7 @@ import br.com.portasabertas.dao.PsicologoRepository;
 import br.com.portasabertas.dto.PacienteExibicaoAgendamentoPsicologoDTO;
 import br.com.portasabertas.model.Agendamento;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 
@@ -15,6 +16,7 @@ import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Set;
 
 @Service
@@ -47,6 +49,7 @@ public class AgendamentoService {
                     .paciente(paciente)
                     .psicologo(psicologo)
                     .data(requestModel.getDataHora())
+                    .active(true)
                     .build();
             agendamentoRepository.save(agendamento);
 
@@ -56,5 +59,12 @@ public class AgendamentoService {
     public List<PacienteExibicaoAgendamentoPsicologoDTO> getAgendamentos(Long psicologoId) {
         final var agendamentos =  agendamentoDAO.findAll(psicologoId);
         return PacienteExibicaoAgendamentoPsicologoDTO.convertToPacienteAgendamentoDTOList(agendamentos);
+    }
+
+    public void desmarcarAgendamento(Long id) {
+        final var agendamento = agendamentoRepository.findById(id)
+                .orElseThrow(() -> new NoSuchElementException("Agendamento não encontrado"));
+        agendamento.setActive(false);
+        agendamentoRepository.save(agendamento);
     }
 }
