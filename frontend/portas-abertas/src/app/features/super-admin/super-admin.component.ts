@@ -49,15 +49,17 @@ export class SuperAdminComponent implements OnInit {
     let navigation = document.getElementById('navigation');
     let main = document.getElementById('main');
     let cardName = document.getElementById('cardName');
-    let painel = document.getElementById('painelCentral');
     let homeText = document.getElementById('homeText');
+    let painel = document.getElementById('painelCentral')
+    let tableAgenda = document.getElementById('table-agenda')
 
     toggle.onclick = function () {
       navigation.classList.toggle('active');
       main.classList.toggle('active');
       cardName.classList.toggle('active');
-      painel.classList.toggle('active');
       homeText.classList.toggle('active');
+      painel.classList.toggle('active');
+      tableAgenda.classList.toggle('active')
     };
   }
 }

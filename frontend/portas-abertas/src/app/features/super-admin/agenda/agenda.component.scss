@@ -2,6 +2,7 @@
   position: fixed;
   width: 1000px;
   height: 556px;
+  top: 90px;
   background: #06446b;
   left: 335px;
   border-radius: 5px;
@@ -10,6 +11,9 @@
 .painelCentral.active {
   width: 1236px;
   left: 105px;
+}
+.fundo.active{
+  width: 1160px;
 }
 .homeText {
   position: relative;

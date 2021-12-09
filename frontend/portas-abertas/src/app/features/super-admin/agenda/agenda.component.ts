@@ -22,6 +22,7 @@ export class AgendaComponent implements OnInit {
 
   ngOnInit(): void {
     this.loadAgenda();
+
   }
 
   loadAgenda(): void {
@@ -74,4 +75,6 @@ export class AgendaComponent implements OnInit {
     }
     return minute.toString();
   }
+
+  
 }

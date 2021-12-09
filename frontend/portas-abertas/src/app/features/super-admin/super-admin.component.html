@@ -14,7 +14,7 @@
           <span class="title p">Portas Abertas</span>
         </a>
       </li>
-      <li (click)="redirectToAgenda()">
+      <li class="hovered" (click)="redirectToAgenda()">
         <a id="inicio">
           <span class="icon"><i class="fa fa-home"></i></span>
           <span class="title">Início</span>
@@ -32,7 +32,7 @@
           <span class="title">Status</span>
         </a>
       </li>
-      <li>
+      <!--<li>
         <a href="#">
           <span class="icon"><i class="fas fa-database"></i></span>
           <span class="title">Banco de Dados</span>
@@ -49,7 +49,7 @@
           <span class="icon"><i class="fas fa-cogs"></i></span>
           <span class="title">Configurações</span>
         </a>
-      </li>
+      </li>-->
       <li (click)="logout()">
         <a>
           <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
@@ -87,8 +87,7 @@
   </div>
 
   <!--Painel Central-->
-  <div class="painelCentral" id="painelCentral">
+  
     <!--Painel Home-->
     <router-outlet></router-outlet>
-  </div>
 </div>

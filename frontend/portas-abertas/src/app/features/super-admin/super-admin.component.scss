@@ -13,7 +13,6 @@
 }
 body {
   min-height: 100vh;
-  overflow-x: hidden;
 }
 //Painel lateral
 .container {
@@ -104,6 +103,7 @@ body {
   border-radius: 50%;
   box-shadow: 35px 35px 0 10px #fff;
   pointer-events: none;
+  
 }
 .navigation ul li:hover a::after,
 .navigation ul li.hovered a::after {
@@ -120,7 +120,7 @@ body {
 }
 //manu top
 .main {
-  position: absolute;
+  position: relative;
   width: calc(100% - 72px);
   left: 44vh;
   min-height: #fff;
@@ -168,7 +168,7 @@ body {
 }
 //Painel home
 .cardBox {
-  position: relative;
+  position: fixed;
   width: 100%;
   padding: 20px;
   display: grid;
@@ -176,6 +176,7 @@ body {
   grid-gap: 30px;
   left: 444px;
   top: -12px;
+  overflow: hidden;
 }
 .cardBox .cardName {
   position: relative;
@@ -190,8 +191,9 @@ body {
   transition: 0.8s;
 }
 .cardBox .cardName.active {
+  position: fixed;
   width: 900px;
-  left: -220px;
+  left: 260px;
 }
 .nameUser {
   position: relative;
